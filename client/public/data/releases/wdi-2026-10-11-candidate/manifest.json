@@ -1,0 +1,282 @@
+{
+  "baseline_sha256": "330c4d45bb149d0d18a023d59498d2100d8f427fb2ebe14c931e0bf77753a791",
+  "dependencies": "standard library only",
+  "license": "CC BY 4.0 subject to indicator exceptions and World Bank additional terms",
+  "license_url": "https://data.worldbank.org/summary-terms-of-use",
+  "release_id": "wdi-2026-10-11-candidate",
+  "requests": [
+    {
+      "path": "raw/BX.TRF.PWKR.DT.GD.ZS.metadata.json",
+      "records": 1,
+      "retrieved_at": "2026-10-11T17:52:16.258373+00:00",
+      "sha256": "6acbc3feaaf54a04593cfbeda6412fa789099bdfa10f7397d66f4457ef8fb94c",
+      "url": "https://api.worldbank.org/v2/indicator/BX.TRF.PWKR.DT.GD.ZS?source=2&format=json"
+    },
+    {
+      "path": "raw/BX.TRF.PWKR.DT.GD.ZS.observations.json",
+      "records": 156,
+      "retrieved_at": "2026-10-11T17:52:25.032050+00:00",
+      "sha256": "ef24e00fa84647a34915296c554983e3f5c7ff5ef7be0327eb1366ef7b304772",
+      "url": "https://api.worldbank.org/v2/country/ARM;GEO;KAZ;KGZ;TJK;UZB/indicator/BX.TRF.PWKR.DT.GD.ZS?source=2&date=2000:2025&format=json&per_page=20000&footnote=y"
+    },
+    {
+      "path": "raw/EG.FEC.RNEW.ZS.metadata.json",
+      "records": 1,
+      "retrieved_at": "2026-10-11T17:52:16.063880+00:00",
+      "sha256": "a402de31aaa77141eba34f5d65ab0013e05d8e0b792c61be9f4c5f857028bc99",
+      "url": "https://api.worldbank.org/v2/indicator/EG.FEC.RNEW.ZS?source=2&format=json"
+    },
+    {
+      "path": "raw/EG.FEC.RNEW.ZS.observations.json",
+      "records": 156,
+      "retrieved_at": "2026-10-11T17:52:24.794342+00:00",
+      "sha256": "238984804826baa6d77cbd4eceb2b0f37fb2b64c10ef7da3f703d7ed89fa7b96",
+      "url": "https://api.worldbank.org/v2/country/ARM;GEO;KAZ;KGZ;TJK;UZB/indicator/EG.FEC.RNEW.ZS?source=2&date=2000:2025&format=json&per_page=20000&footnote=y"
+    },
+    {
+      "path": "raw/FP.CPI.TOTL.ZG.metadata.json",
+      "records": 1,
+      "retrieved_at": "2026-10-11T17:52:16.156989+00:00",
+      "sha256": "df9371a3b6c01e55a3f28991e62e1b1ebbe0cd2a7da94456be9938c7a2962233",
+      "url": "https://api.worldbank.org/v2/indicator/FP.CPI.TOTL.ZG?source=2&format=json"
+    },
+    {
+      "path": "raw/FP.CPI.TOTL.ZG.observations.json",
+      "records": 156,
+      "retrieved_at": "2026-10-11T17:52:24.843361+00:00",
+      "sha256": "e868487300ce11b2f8b94f25dde53c641c1c6159502d50ae50ace2da44434177",
+      "url": "https://api.worldbank.org/v2/country/ARM;GEO;KAZ;KGZ;TJK;UZB/indicator/FP.CPI.TOTL.ZG?source=2&date=2000:2025&format=json&per_page=20000&footnote=y"
+    },
+    {
+      "path": "raw/NY.GDP.MKTP.KD.ZG.metadata.json",
+      "records": 1,
+      "retrieved_at": "2026-10-11T17:52:16.075570+00:00",
+      "sha256": "ed7703d841d4dde2d1cb858f0dd53229fe3e841f72abb17dbc8c950ad20c88ce",
+      "url": "https://api.worldbank.org/v2/indicator/NY.GDP.MKTP.KD.ZG?source=2&format=json"
+    },
+    {
+      "path": "raw/NY.GDP.MKTP.KD.ZG.observations.json",
+      "records": 156,
+      "retrieved_at": "2026-10-11T17:52:24.801945+00:00",
+      "sha256": "13b7072ae7ac713559d5e2a51e5d6b352958133bdbfa8ef1570f4a6ef3ebac3a",
+      "url": "https://api.worldbank.org/v2/country/ARM;GEO;KAZ;KGZ;TJK;UZB/indicator/NY.GDP.MKTP.KD.ZG?source=2&date=2000:2025&format=json&per_page=20000&footnote=y"
+    },
+    {
+      "path": "raw/NY.GDP.PCAP.KD.metadata.json",
+      "records": 1,
+      "retrieved_at": "2026-10-11T17:52:25.287871+00:00",
+      "sha256": "46689488cd435920647264ede1bfb2d4b51b09800fb36f3d3b1422a0b11ea49d",
+      "url": "https://api.worldbank.org/v2/indicator/NY.GDP.PCAP.KD?source=2&format=json"
+    },
+    {
+      "path": "raw/NY.GDP.PCAP.KD.observations.json",
+      "records": 156,
+      "retrieved_at": "2026-10-11T17:52:33.648198+00:00",
+      "sha256": "5e10e36bb8e55a59ff2e824f346612905537888f5dd34a0cd89da5390ed6da37",
+      "url": "https://api.worldbank.org/v2/country/ARM;GEO;KAZ;KGZ;TJK;UZB/indicator/NY.GDP.PCAP.KD?source=2&date=2000:2025&format=json&per_page=20000&footnote=y"
+    },
+    {
+      "path": "raw/SE.SEC.ENRR.metadata.json",
+      "records": 1,
+      "retrieved_at": "2026-10-11T17:52:24.929758+00:00",
+      "sha256": "eec553a1bd5742b286200a0a8b461f396409e1bb323ef4dcfae40e0ba012565e",
+      "url": "https://api.worldbank.org/v2/indicator/SE.SEC.ENRR?source=2&format=json"
+    },
+    {
+      "path": "raw/SE.SEC.ENRR.observations.json",
+      "records": 156,
+      "retrieved_at": "2026-10-11T17:52:33.929283+00:00",
+      "sha256": "f6774a17b4187ab72be2e5ad32e23049395886487389135d71019dfa1d109e31",
+      "url": "https://api.worldbank.org/v2/country/ARM;GEO;KAZ;KGZ;TJK;UZB/indicator/SE.SEC.ENRR?source=2&date=2000:2025&format=json&per_page=20000&footnote=y"
+    },
+    {
+      "path": "raw/SI.DST.FRST.20.metadata.json",
+      "records": 1,
+      "retrieved_at": "2026-10-11T17:52:25.394811+00:00",
+      "sha256": "73480098959fb155cdef40c3e10a49beb36aae806e379b679a54f7731ea63b56",
+      "url": "https://api.worldbank.org/v2/indicator/SI.DST.FRST.20?source=2&format=json"
+    },
+    {
+      "path": "raw/SI.DST.FRST.20.observations.json",
+      "records": 156,
+      "retrieved_at": "2026-10-11T17:52:33.550544+00:00",
+      "sha256": "623e6f5768d01fbc44108e2892798994a4f955edd0da9f15470b4d01d0a82a78",
+      "url": "https://api.worldbank.org/v2/country/ARM;GEO;KAZ;KGZ;TJK;UZB/indicator/SI.DST.FRST.20?source=2&date=2000:2025&format=json&per_page=20000&footnote=y"
+    },
+    {
+      "path": "raw/SI.POV.DDAY.metadata.json",
+      "records": 1,
+      "retrieved_at": "2026-10-11T17:52:25.237127+00:00",
+      "sha256": "ad5ff599e5d33978cbd5fe9b9f96bac98ea150dafb64fcf5066dac11369ef389",
+      "url": "https://api.worldbank.org/v2/indicator/SI.POV.DDAY?source=2&format=json"
+    },
+    {
+      "path": "raw/SI.POV.DDAY.observations.json",
+      "records": 156,
+      "retrieved_at": "2026-10-11T17:52:33.524157+00:00",
+      "sha256": "f4841c6995642e5ad6ca277df2de72169dea2da4d0242d725afdaaf61e94a690",
+      "url": "https://api.worldbank.org/v2/country/ARM;GEO;KAZ;KGZ;TJK;UZB/indicator/SI.POV.DDAY?source=2&date=2000:2025&format=json&per_page=20000&footnote=y"
+    },
+    {
+      "path": "raw/SI.POV.GINI.metadata.json",
+      "records": 1,
+      "retrieved_at": "2026-10-11T17:52:33.791209+00:00",
+      "sha256": "e377bf82b38024748153880ff90c0106a0ef0fd8cb04761146cc60a2609cab3d",
+      "url": "https://api.worldbank.org/v2/indicator/SI.POV.GINI?source=2&format=json"
+    },
+    {
+      "path": "raw/SI.POV.GINI.observations.json",
+      "records": 156,
+      "retrieved_at": "2026-10-11T17:52:39.852290+00:00",
+      "sha256": "6ff23fc177f52c24e1876f105e73df128850f02687fb82ff40d80c5add44c913",
+      "url": "https://api.worldbank.org/v2/country/ARM;GEO;KAZ;KGZ;TJK;UZB/indicator/SI.POV.GINI?source=2&date=2000:2025&format=json&per_page=20000&footnote=y"
+    },
+    {
+      "path": "raw/SI.POV.LMIC.metadata.json",
+      "records": 1,
+      "retrieved_at": "2026-10-11T17:52:33.765653+00:00",
+      "sha256": "94bce1860be57be779362c187a967e861edaa1627a73607800521ecc86ad4bff",
+      "url": "https://api.worldbank.org/v2/indicator/SI.POV.LMIC?source=2&format=json"
+    },
+    {
+      "path": "raw/SI.POV.LMIC.observations.json",
+      "records": 156,
+      "retrieved_at": "2026-10-11T17:52:39.794748+00:00",
+      "sha256": "a32771ce4b27bab4e1d9ac87901284f5bf026056345f6fd8ef187c0ec26a8d2b",
+      "url": "https://api.worldbank.org/v2/country/ARM;GEO;KAZ;KGZ;TJK;UZB/indicator/SI.POV.LMIC?source=2&date=2000:2025&format=json&per_page=20000&footnote=y"
+    },
+    {
+      "path": "raw/SI.POV.NAHC.metadata.json",
+      "records": 1,
+      "retrieved_at": "2026-10-11T17:52:34.077113+00:00",
+      "sha256": "ededac5afbec462ef894a27656525dbb826becfc1846d950c2a8de65815f55e5",
+      "url": "https://api.worldbank.org/v2/indicator/SI.POV.NAHC?source=2&format=json"
+    },
+    {
+      "path": "raw/SI.POV.NAHC.observations.json",
+      "records": 156,
+      "retrieved_at": "2026-10-11T17:52:40.097266+00:00",
+      "sha256": "1d6dc8f0251170f80339f1d8dbc87edb7b792b8a0bc5a79eb66282ccfecaacd5",
+      "url": "https://api.worldbank.org/v2/country/ARM;GEO;KAZ;KGZ;TJK;UZB/indicator/SI.POV.NAHC?source=2&date=2000:2025&format=json&per_page=20000&footnote=y"
+    },
+    {
+      "path": "raw/SL.TLF.CACT.ZS.metadata.json",
+      "records": 1,
+      "retrieved_at": "2026-10-11T17:52:34.261986+00:00",
+      "sha256": "10154473c4d75dd636f728baf231162ddd5a12c910084f832a3b93fe55038fe7",
+      "url": "https://api.worldbank.org/v2/indicator/SL.TLF.CACT.ZS?source=2&format=json"
+    },
+    {
+      "path": "raw/SL.TLF.CACT.ZS.observations.json",
+      "records": 156,
+      "retrieved_at": "2026-10-11T17:52:39.926608+00:00",
+      "sha256": "bbff20343b36ac6b7c0b7f5e3330f390c0866881ff2e27bbab924757a51a9c6b",
+      "url": "https://api.worldbank.org/v2/country/ARM;GEO;KAZ;KGZ;TJK;UZB/indicator/SL.TLF.CACT.ZS?source=2&date=2000:2025&format=json&per_page=20000&footnote=y"
+    },
+    {
+      "path": "raw/SL.UEM.1524.ZS.metadata.json",
+      "records": 1,
+      "retrieved_at": "2026-10-11T17:52:40.017336+00:00",
+      "sha256": "591afae475788a26e1c53db79754212fcdea0489065f49cb963ad23478ac5804",
+      "url": "https://api.worldbank.org/v2/indicator/SL.UEM.1524.ZS?source=2&format=json"
+    },
+    {
+      "path": "raw/SL.UEM.1524.ZS.observations.json",
+      "records": 156,
+      "retrieved_at": "2026-10-11T17:52:44.113415+00:00",
+      "sha256": "8950763ba5be7aa9abf3057623c656c7c592c9e5e219765305352ed09bb5ae63",
+      "url": "https://api.worldbank.org/v2/country/ARM;GEO;KAZ;KGZ;TJK;UZB/indicator/SL.UEM.1524.ZS?source=2&date=2000:2025&format=json&per_page=20000&footnote=y"
+    },
+    {
+      "path": "raw/SL.UEM.TOTL.ZS.metadata.json",
+      "records": 1,
+      "retrieved_at": "2026-10-11T17:52:39.955500+00:00",
+      "sha256": "3ae370ed4bebba092338e94334c35add71490324ee57f1dfe81885dade51f52f",
+      "url": "https://api.worldbank.org/v2/indicator/SL.UEM.TOTL.ZS?source=2&format=json"
+    },
+    {
+      "path": "raw/SL.UEM.TOTL.ZS.observations.json",
+      "records": 156,
+      "retrieved_at": "2026-10-11T17:52:44.515025+00:00",
+      "sha256": "c609f12a0652172c29b28e601590bc308cb22a928c70d354e71c644b702ac71c",
+      "url": "https://api.worldbank.org/v2/country/ARM;GEO;KAZ;KGZ;TJK;UZB/indicator/SL.UEM.TOTL.ZS?source=2&date=2000:2025&format=json&per_page=20000&footnote=y"
+    },
+    {
+      "path": "raw/SM.POP.NETM.metadata.json",
+      "records": 1,
+      "retrieved_at": "2026-10-11T17:52:40.155145+00:00",
+      "sha256": "fff31c329e617faad200af1d3b0ee39914b39483399a0d3e4e42aa9761dc6c11",
+      "url": "https://api.worldbank.org/v2/indicator/SM.POP.NETM?source=2&format=json"
+    },
+    {
+      "path": "raw/SM.POP.NETM.observations.json",
+      "records": 156,
+      "retrieved_at": "2026-10-11T17:52:44.314527+00:00",
+      "sha256": "5b06190538374e9ef3c63b2aa8b1664bdbe0d231835675d176f27bec189e8240",
+      "url": "https://api.worldbank.org/v2/country/ARM;GEO;KAZ;KGZ;TJK;UZB/indicator/SM.POP.NETM?source=2&date=2000:2025&format=json&per_page=20000&footnote=y"
+    },
+    {
+      "path": "raw/SP.POP.TOTL.metadata.json",
+      "records": 1,
+      "retrieved_at": "2026-10-11T17:52:40.211770+00:00",
+      "sha256": "2f8491efc00bf2c0995112ff8e87aba69e5e9d22d0880b22f7e3a4ec757ba05c",
+      "url": "https://api.worldbank.org/v2/indicator/SP.POP.TOTL?source=2&format=json"
+    },
+    {
+      "path": "raw/SP.POP.TOTL.observations.json",
+      "records": 156,
+      "retrieved_at": "2026-10-11T17:52:45.311101+00:00",
+      "sha256": "b2b85e568efd65685e45d75d83861711cb4553d997e0773078a95f81d12ee0cc",
+      "url": "https://api.worldbank.org/v2/country/ARM;GEO;KAZ;KGZ;TJK;UZB/indicator/SP.POP.TOTL?source=2&date=2000:2025&format=json&per_page=20000&footnote=y"
+    },
+    {
+      "path": "raw/SP.URB.TOTL.IN.ZS.metadata.json",
+      "records": 1,
+      "retrieved_at": "2026-10-11T17:52:44.327152+00:00",
+      "sha256": "ada77d666a1469f69379933d0597cdd420299806163905af52de79d538da95e6",
+      "url": "https://api.worldbank.org/v2/indicator/SP.URB.TOTL.IN.ZS?source=2&format=json"
+    },
+    {
+      "path": "raw/SP.URB.TOTL.IN.ZS.observations.json",
+      "records": 156,
+      "retrieved_at": "2026-10-11T17:52:47.170151+00:00",
+      "sha256": "08aaa6f3c8b366f053153dd3e932002bda9e6c9bc6b86716d0eb80ac67b152ab",
+      "url": "https://api.worldbank.org/v2/country/ARM;GEO;KAZ;KGZ;TJK;UZB/indicator/SP.URB.TOTL.IN.ZS?source=2&date=2000:2025&format=json&per_page=20000&footnote=y"
+    }
+  ],
+  "runtime": "CPython 3.14.3",
+  "scope": {
+    "countries": [
+      "ARM",
+      "GEO",
+      "KAZ",
+      "KGZ",
+      "TJK",
+      "UZB"
+    ],
+    "indicators": [
+      "BX.TRF.PWKR.DT.GD.ZS",
+      "EG.FEC.RNEW.ZS",
+      "FP.CPI.TOTL.ZG",
+      "NY.GDP.MKTP.KD.ZG",
+      "NY.GDP.PCAP.KD",
+      "SE.SEC.ENRR",
+      "SI.DST.FRST.20",
+      "SI.POV.DDAY",
+      "SI.POV.GINI",
+      "SI.POV.LMIC",
+      "SI.POV.NAHC",
+      "SL.TLF.CACT.ZS",
+      "SL.UEM.1524.ZS",
+      "SL.UEM.TOTL.ZS",
+      "SM.POP.NETM",
+      "SP.POP.TOTL",
+      "SP.URB.TOTL.IN.ZS"
+    ],
+    "years": [
+      2000,
+      2025
+    ]
+  },
+  "status": "CANDIDATE_NOT_APPROVED"
+}

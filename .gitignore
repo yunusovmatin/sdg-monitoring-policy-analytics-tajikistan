@@ -117,3 +117,10 @@ Local Files/
 .project-config.json
 
 .vercel/
+
+# Automated browser evidence (kept privately)
+test-results/
+playwright-report/
+
+__pycache__/
+*.pyc

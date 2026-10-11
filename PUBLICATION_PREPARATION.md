@@ -1,3 +1,5 @@
+> Historical v1.0.0 record. Superseded for v2 review by docs/PRODUCTION_READINESS_REPORT.md and the versioned candidate evidence. This file does not validate current data definitions or the v2 release.
+
 # Publication preparation — 11 October 2026
 
 Author: Matin Yunusov. Independent analytical portfolio prototype, not commissioned, endorsed, reviewed or operated by UNDP.

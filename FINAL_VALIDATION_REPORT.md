@@ -1,3 +1,5 @@
+> Historical v1.0.0 record. Superseded for v2 review by docs/PRODUCTION_READINESS_REPORT.md and the versioned candidate evidence. This file does not validate current data definitions or the v2 release.
+
 # Final validation report — Project 1
 
 **Status: PASS WITH LIMITATIONS.** Local portfolio application validated on 10 October 2026. Author: Matin Yunusov. Independent analytical portfolio prototype; not commissioned, endorsed, reviewed or operated by UNDP. No external deployment or publication performed.

@@ -10,6 +10,7 @@ import {
 import { ArrowRight, Download, TrendingDown, TrendingUp } from "lucide-react";
 import { useState } from "react";
 import { type DataPoint, latest, comparisonRows, comparisonCsv, displayUnit } from "@/lib/data";
+import { comparableGap, INCOMPATIBLE_CROSS_COUNTRY } from "@/lib/governance";
 import { downloadCsv } from "@/lib/download";
 import {
   CartesianGrid,
@@ -30,7 +31,7 @@ interface ComparisonToolProps {
 export default function CountryComparisonTool({ data, indicators }: ComparisonToolProps) {
   const [countryA, setCountryA] = useState("TJK");
   const [countryB, setCountryB] = useState("KGZ");
-  const [selectedIndicator, setSelectedIndicator] = useState("SI.POV.LMIC");
+  const [selectedIndicator, setSelectedIndicator] = useState("NY.GDP.PCAP.KD");
 
   const countries = [
     { code: "TJK", name: "Tajikistan" },
@@ -43,7 +44,7 @@ export default function CountryComparisonTool({ data, indicators }: ComparisonTo
 
   const chartData=comparisonRows(data,selectedIndicator,countryA,countryB);
   const latestA=latest(data,selectedIndicator,countryA), latestB=latest(data,selectedIndicator,countryB);
-  const gap=latestA && latestB ? latestA.value-latestB.value : null;
+  const gap=comparableGap(latestA,latestB);
   const unit=displayUnit(selectedIndicator,indicators.find(i=>i.code===selectedIndicator)?.unit ?? "");
   const gapUnit=unit.startsWith("%") ? "percentage points" : unit;
   const asynchronous=latestA && latestB && latestA.year!==latestB.year;
@@ -53,7 +54,7 @@ export default function CountryComparisonTool({ data, indicators }: ComparisonTo
     <Card className="p-6">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
         <div>
-          <h3 className="text-lg font-bold text-gray-900">Interactive Comparison Tool</h3>
+          <h2 className="text-lg font-bold text-gray-900">Interactive Comparison Tool</h2>
           <p className="text-sm text-gray-500">Side-by-side benchmarking analysis</p>
         </div>
         
@@ -74,7 +75,7 @@ export default function CountryComparisonTool({ data, indicators }: ComparisonTo
             </SelectContent>
           </Select>
 
-          <span className="text-gray-400 font-medium">vs</span>
+          <span className="text-gray-600 font-medium">vs</span>
 
           <Select value={countryB} onValueChange={setCountryB}>
             <SelectTrigger className="w-[140px]" aria-label="Comparison Country B">
@@ -104,7 +105,9 @@ export default function CountryComparisonTool({ data, indicators }: ComparisonTo
         </div>
       </div>
 
-      <details className="mb-4 text-sm"><summary className="cursor-pointer">Comparison chart values (text alternative)</summary><div className="overflow-x-auto"><table className="w-full text-left"><caption>{indicators.find(i=>i.code===selectedIndicator)?.name}; {unit}</caption><thead><tr><th scope="col">Year</th><th scope="col">{countryA}</th><th scope="col">{countryB}</th></tr></thead><tbody>{chartData.map(row=><tr key={row.year}><th scope="row">{row.year}</th><td>{row[countryA] ?? "Missing"}</td><td>{row[countryB] ?? "Missing"}</td></tr>)}</tbody></table></div></details>
+      <p className="mb-4 text-sm font-medium">{INCOMPATIBLE_CROSS_COUNTRY.has(selectedIndicator) ? "National poverty lines or income/consumption survey concepts differ by country. No cross-country numeric gap is computed; consult observation footnotes." : "Compare definitions, units and observation years before interpreting differences. This view uses the same captured candidate release."}</p>
+      <details className="mb-4 text-sm"><summary>Comparison observation footnotes</summary>{data.filter(d=>d.indicator_code===selectedIndicator && [countryA,countryB].includes(d.country_code)).map(d=><p key={`${d.country_code}-${d.year}`} className="my-2 break-words">{d.country_name}, {d.year}: {d.footnote || "No observation footnote supplied."}</p>)}</details>
+      <details className="mb-4 text-sm"><summary className="cursor-pointer">Comparison chart values (text alternative)</summary><div className="overflow-x-auto table-scroll" tabIndex={0} aria-label="Scrollable observation table"><table className="w-full text-left"><caption>{indicators.find(i=>i.code===selectedIndicator)?.name}; {unit}</caption><thead><tr><th scope="col">Year</th><th scope="col">{countryA}</th><th scope="col">{countryB}</th></tr></thead><tbody>{chartData.map(row=><tr key={row.year}><th scope="row">{row.year}</th><td>{row[countryA] ?? "Missing"}</td><td>{row[countryB] ?? "Missing"}</td></tr>)}</tbody></table></div></details>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Key Metrics Panel */}
         <div className="space-y-6">
@@ -142,7 +145,7 @@ export default function CountryComparisonTool({ data, indicators }: ComparisonTo
 
           <div className="text-sm text-gray-600 leading-relaxed">
             <p>
-              <strong>Interpretation:</strong> {asynchronous ? "Asynchronous comparison: latest observations refer to different years; the gap is not a same-year comparison." : "Observation years are shown on each card; missing data produce no gap."} Measurement methods and retrieval vintages may differ; differences alone do not establish policy effects. Export contains the chart series, with blanks for missing values and zeros preserved.
+              <strong>Interpretation:</strong> {asynchronous ? "Latest observations refer to different years; no numeric gap is computed." : "Observation years are shown on each card; missing data produce no gap."} Measurement methods and retrieval vintages may differ; differences alone do not establish policy effects. Export contains the chart series, with blanks for missing values and zeros preserved.
             </p>
           </div>
         </div>
@@ -169,7 +172,8 @@ export default function CountryComparisonTool({ data, indicators }: ComparisonTo
               />
               <Legend verticalAlign="top" height={36} />
               <Line 
-                type="monotone" 
+                type="linear"
+                isAnimationActive={false}
                 dataKey={countryA} 
                 name={countries.find(c => c.code === countryA)?.name}
                 stroke="#2563eb" 
@@ -178,7 +182,8 @@ export default function CountryComparisonTool({ data, indicators }: ComparisonTo
                 activeDot={{ r: 6 }}
               />
               <Line 
-                type="monotone" 
+                type="linear"
+                isAnimationActive={false}
                 dataKey={countryB} 
                 name={countries.find(c => c.code === countryB)?.name}
                 stroke="#10b981" 

@@ -1,0 +1,104 @@
+{
+  "BX.TRF.PWKR.DT.GD.ZS": {
+    "classification": "Contextual WDI statistic",
+    "definition": "Remittance inflows / GDP; not remittance transaction costs (10.c.1).",
+    "sdg": "No exact SDG indicator",
+    "source_url": "https://data.worldbank.org/indicator/BX.TRF.PWKR.DT.GD.ZS"
+  },
+  "EG.FEC.RNEW.ZS": {
+    "classification": "Exact official SDG indicator concept",
+    "definition": "Share of renewables in total final energy consumption; not electricity generation and not SDG 13.",
+    "sdg": "7.2.1",
+    "source_url": "https://data.worldbank.org/indicator/EG.FEC.RNEW.ZS"
+  },
+  "FP.CPI.TOTL.ZG": {
+    "classification": "Contextual WDI statistic",
+    "definition": "Annual CPI change; negative inflation is possible.",
+    "sdg": "No exact SDG indicator",
+    "source_url": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG"
+  },
+  "NY.GDP.MKTP.KD.ZG": {
+    "classification": "SDG-aligned proxy",
+    "definition": "Aggregate real GDP growth; official 8.1.1 uses real GDP per capita growth.",
+    "sdg": "8.1 (proxy; not 8.1.1)",
+    "source_url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG"
+  },
+  "NY.GDP.PCAP.KD": {
+    "classification": "Contextual WDI statistic",
+    "definition": "Real GDP per capita level in constant 2015 US dollars; not PPP dollars, not growth.",
+    "sdg": "8.1 context",
+    "source_url": "https://data.worldbank.org/indicator/NY.GDP.PCAP.KD"
+  },
+  "SE.SEC.ENRR": {
+    "classification": "Contextual WDI statistic",
+    "definition": "Gross secondary enrollment numerator includes pupils of any age; can exceed 100%; not completion or learning achievement.",
+    "sdg": "4 context; no exact indicator",
+    "source_url": "https://data.worldbank.org/indicator/SE.SEC.ENRR"
+  },
+  "SI.DST.FRST.20": {
+    "classification": "SDG-aligned proxy",
+    "definition": "Bottom 20% income share level; official 10.1.1 measures bottom 40% per-capita welfare growth.",
+    "sdg": "10.1 context; not 10.1.1",
+    "source_url": "https://data.worldbank.org/indicator/SI.DST.FRST.20"
+  },
+  "SI.POV.DDAY": {
+    "classification": "Exact official SDG indicator concept; aggregate only",
+    "definition": "Current WDI $3.00/day 2021 PPP; original $2.15 label cannot authenticate archived numeric vintage. Full SDG disaggregation absent.",
+    "sdg": "1.1.1",
+    "source_url": "https://data.worldbank.org/indicator/SI.POV.DDAY"
+  },
+  "SI.POV.GINI": {
+    "classification": "SDG-aligned proxy",
+    "definition": "Gini distribution index 0–100; survey welfare concepts differ; not a growth statistic.",
+    "sdg": "10 inequality context; no exact indicator",
+    "source_url": "https://data.worldbank.org/indicator/SI.POV.GINI"
+  },
+  "SI.POV.LMIC": {
+    "classification": "SDG-aligned proxy",
+    "definition": "Current WDI $4.20/day 2021 PPP; original $3.65 label cannot authenticate archived numeric vintage. This higher threshold is not SDG extreme poverty 1.1.1.",
+    "sdg": "1 poverty context; not 1.1.1",
+    "source_url": "https://data.worldbank.org/indicator/SI.POV.LMIC"
+  },
+  "SI.POV.NAHC": {
+    "classification": "Exact official SDG indicator concept; aggregate only",
+    "definition": "National poverty-line population share; national definitions differ and do not supply full sex/age disaggregation.",
+    "sdg": "1.2.1",
+    "source_url": "https://data.worldbank.org/indicator/SI.POV.NAHC"
+  },
+  "SL.TLF.CACT.ZS": {
+    "classification": "Contextual WDI statistic",
+    "definition": "Modeled ILO estimate; labour force / population ages15+; not unemployment denominator.",
+    "sdg": "8 labour-market context",
+    "source_url": "https://data.worldbank.org/indicator/SL.TLF.CACT.ZS"
+  },
+  "SL.UEM.1524.ZS": {
+    "classification": "SDG-aligned proxy / age disaggregation",
+    "definition": "Modeled ILO youth unemployment / youth labour force ages15–24, not all youth population, not adult unemployment, not NEET.",
+    "sdg": "8.5.2 (ages15–24 aggregate)",
+    "source_url": "https://data.worldbank.org/indicator/SL.UEM.1524.ZS"
+  },
+  "SL.UEM.TOTL.ZS": {
+    "classification": "Exact official SDG indicator concept; modeled aggregate",
+    "definition": "Modeled ILO unemployment / labour force; full SDG sex/age/disability disaggregations are absent. Total is not adult.",
+    "sdg": "8.5.2",
+    "source_url": "https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS"
+  },
+  "SM.POP.NETM": {
+    "classification": "Contextual WDI statistic",
+    "definition": "Immigrants minus emigrants in persons, allowing negative estimates; not remittance-recipient count.",
+    "sdg": "Migration context; no exact indicator",
+    "source_url": "https://data.worldbank.org/indicator/SM.POP.NETM"
+  },
+  "SP.POP.TOTL": {
+    "classification": "Contextual WDI statistic",
+    "definition": "Midyear population estimate in persons; national not regional denominator.",
+    "sdg": "Demographic denominator; no exact indicator",
+    "source_url": "https://data.worldbank.org/indicator/SP.POP.TOTL"
+  },
+  "SP.URB.TOTL.IN.ZS": {
+    "classification": "Contextual WDI statistic",
+    "definition": "Urban population / total population according to national urban definitions.",
+    "sdg": "Urbanization context; no exact indicator",
+    "source_url": "https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS"
+  }
+}

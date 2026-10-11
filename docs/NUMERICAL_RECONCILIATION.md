@@ -1,5 +1,7 @@
 # Numerical reconciliation — Project 1
 
+> Historical v1 arithmetic audit only. Its earlier PASS WITH LIMITATIONS finding does not authenticate the original WDI extraction vintage. The v2 primary-source audit found unresolved international-poverty definitions and materially revised unemployment estimates. Calculations below reproduce supplied archival numbers, not approved current statistical claims. Current status is governed by DATA_VINTAGE_AND_POVERTY_RECONCILIATION.md and the newly authored canonical candidate reports in docs/reports/. The regional demonstration and old poverty figures were removed from the public analytical path; original files remain under data/legacy.
+
 Author: Matin Yunusov. Independent analytical portfolio prototype; not commissioned, endorsed, reviewed or operated by UNDP.
 
 Audit date: 10 October 2026. Primary numerical evidence: `client/public/data/processed/sdg_tjk_tidy.csv`, bundled WDI snapshot labelled retrieved 25 January 2026. These are reconciled historical snapshot values, not claims that today's WDI release is identical. CSV SHA-256: `330c4d45bb149d0d18a023d59498d2100d8f427fb2ebe14c931e0bf77753a791`.

@@ -1,0 +1,138 @@
+{
+  "BX.TRF.PWKR.DT.GD.ZS": {
+    "license": "CC BY-4.0",
+    "license_label_evidence": "License  : CC BY-4.0",
+    "page_sha256_at_retrieval": "aa74f5bc4fac78ad8d415e4154b1e2e66fc818c3c07550b97dd32e434caa1861",
+    "retrieved_at": "2026-10-11T17:55:44.533739+00:00",
+    "terms_url": "https://data.worldbank.org/summary-terms-of-use",
+    "url": "https://data.worldbank.org/indicator/BX.TRF.PWKR.DT.GD.ZS"
+  },
+  "EG.FEC.RNEW.ZS": {
+    "license": "CC BY-4.0",
+    "license_label_evidence": "License  : CC BY-4.0",
+    "page_sha256_at_retrieval": "7a3bb2a96602f4aeac8062684768dd591557a629b4dedebe9259e652324f568e",
+    "retrieved_at": "2026-10-11T17:55:44.509005+00:00",
+    "terms_url": "https://data.worldbank.org/summary-terms-of-use",
+    "url": "https://data.worldbank.org/indicator/EG.FEC.RNEW.ZS"
+  },
+  "FP.CPI.TOTL.ZG": {
+    "license": "CC BY-4.0",
+    "license_label_evidence": "License  : CC BY-4.0",
+    "page_sha256_at_retrieval": "28afab431a4c46cbc692ed38f6b21207cccbc4ba8b4b20890a81ac9e3f046a52",
+    "retrieved_at": "2026-10-11T17:55:44.536680+00:00",
+    "terms_url": "https://data.worldbank.org/summary-terms-of-use",
+    "url": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG"
+  },
+  "NY.GDP.MKTP.KD.ZG": {
+    "license": "CC BY-4.0",
+    "license_label_evidence": "License  : CC BY-4.0",
+    "page_sha256_at_retrieval": "38c5a30143969a1791e314ce731bd89a334c9ac26bf3e018c4f407af580d3313",
+    "retrieved_at": "2026-10-11T17:55:44.516344+00:00",
+    "terms_url": "https://data.worldbank.org/summary-terms-of-use",
+    "url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG"
+  },
+  "NY.GDP.PCAP.KD": {
+    "license": "CC BY-4.0",
+    "license_label_evidence": "License  : CC BY-4.0",
+    "page_sha256_at_retrieval": "33ba9f19cecc8ec4126d791d0b601b688b88020229c4f3dee5c2d367821160e6",
+    "retrieved_at": "2026-10-11T17:55:44.706873+00:00",
+    "terms_url": "https://data.worldbank.org/summary-terms-of-use",
+    "url": "https://data.worldbank.org/indicator/NY.GDP.PCAP.KD"
+  },
+  "SE.SEC.ENRR": {
+    "license": "CC BY-4.0",
+    "license_label_evidence": "License  : CC BY-4.0",
+    "page_sha256_at_retrieval": "3737fb85bef7f233a9161ce1db585ebe02d23de0ec74797ab0352a152c1b54dc",
+    "retrieved_at": "2026-10-11T17:56:09.102089+00:00",
+    "terms_url": "https://data.worldbank.org/summary-terms-of-use",
+    "url": "https://data.worldbank.org/indicator/SE.SEC.ENRR"
+  },
+  "SI.DST.FRST.20": {
+    "license": "CC BY-4.0",
+    "license_label_evidence": "License  : CC BY-4.0",
+    "page_sha256_at_retrieval": "f2abd37dad09e37607ce5bd8eff3c38808f03324ceb3ed4009a28c96dca484ff",
+    "retrieved_at": "2026-10-11T17:55:44.745138+00:00",
+    "terms_url": "https://data.worldbank.org/summary-terms-of-use",
+    "url": "https://data.worldbank.org/indicator/SI.DST.FRST.20"
+  },
+  "SI.POV.DDAY": {
+    "license": "CC BY-4.0",
+    "license_label_evidence": "License  : CC BY-4.0",
+    "page_sha256_at_retrieval": "4b32b678f95e8dd53e251dcf4bcc3d78a1145ef07efab6b05105cf192672aa06",
+    "retrieved_at": "2026-10-11T17:55:44.729714+00:00",
+    "terms_url": "https://data.worldbank.org/summary-terms-of-use",
+    "url": "https://data.worldbank.org/indicator/SI.POV.DDAY"
+  },
+  "SI.POV.GINI": {
+    "license": "CC BY-4.0",
+    "license_label_evidence": "License  : CC BY-4.0",
+    "page_sha256_at_retrieval": "cb7539c5ba5e14195b8626bd983a69c5710053bce8ce1f9028bdfea18fb7c69a",
+    "retrieved_at": "2026-10-11T17:55:44.875110+00:00",
+    "terms_url": "https://data.worldbank.org/summary-terms-of-use",
+    "url": "https://data.worldbank.org/indicator/SI.POV.GINI"
+  },
+  "SI.POV.LMIC": {
+    "license": "CC BY-4.0",
+    "license_label_evidence": "License  : CC BY-4.0",
+    "page_sha256_at_retrieval": "f3b25594cd0b7d90481297a8a130994ffceb19d5f6353cafa76bc5f17360f3e6",
+    "retrieved_at": "2026-10-11T17:56:13.093076+00:00",
+    "terms_url": "https://data.worldbank.org/summary-terms-of-use",
+    "url": "https://data.worldbank.org/indicator/SI.POV.LMIC"
+  },
+  "SI.POV.NAHC": {
+    "license": "CC BY-4.0",
+    "license_label_evidence": "License  : CC BY-4.0",
+    "page_sha256_at_retrieval": "39ce82b2bfe3eb0c6f39ed20e0693e3ce96112ee7274177aad6606290fcc4655",
+    "retrieved_at": "2026-10-11T17:55:44.900273+00:00",
+    "terms_url": "https://data.worldbank.org/summary-terms-of-use",
+    "url": "https://data.worldbank.org/indicator/SI.POV.NAHC"
+  },
+  "SL.TLF.CACT.ZS": {
+    "license": "CC BY-4.0",
+    "license_label_evidence": "License  : CC BY-4.0",
+    "page_sha256_at_retrieval": "b01492d933d995af6fb479908d4b4b3942b9e811f55de3f080788bfeb07f0e81",
+    "retrieved_at": "2026-10-11T17:55:45.077399+00:00",
+    "terms_url": "https://data.worldbank.org/summary-terms-of-use",
+    "url": "https://data.worldbank.org/indicator/SL.TLF.CACT.ZS"
+  },
+  "SL.UEM.1524.ZS": {
+    "license": "CC BY-4.0",
+    "license_label_evidence": "License  : CC BY-4.0",
+    "page_sha256_at_retrieval": "dd4ed19aa8af9cd430d87b10719e305f488b67a444482df487b64db70f78a18a",
+    "retrieved_at": "2026-10-11T17:55:45.107517+00:00",
+    "terms_url": "https://data.worldbank.org/summary-terms-of-use",
+    "url": "https://data.worldbank.org/indicator/SL.UEM.1524.ZS"
+  },
+  "SL.UEM.TOTL.ZS": {
+    "license": "CC BY-4.0",
+    "license_label_evidence": "License  : CC BY-4.0",
+    "page_sha256_at_retrieval": "a97424924c82afb63bf9f68a68b4d78274373211da6ba656c5180f1b3872f84f",
+    "retrieved_at": "2026-10-11T17:55:45.248159+00:00",
+    "terms_url": "https://data.worldbank.org/summary-terms-of-use",
+    "url": "https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS"
+  },
+  "SM.POP.NETM": {
+    "license": "CC BY-4.0",
+    "license_label_evidence": "License  : CC BY-4.0",
+    "page_sha256_at_retrieval": "404f5664fe8087054958183f2afb36813f5993ab5089d6e92a6b3b29daf8fc38",
+    "retrieved_at": "2026-10-11T17:55:45.272683+00:00",
+    "terms_url": "https://data.worldbank.org/summary-terms-of-use",
+    "url": "https://data.worldbank.org/indicator/SM.POP.NETM"
+  },
+  "SP.POP.TOTL": {
+    "license": "CC BY-4.0",
+    "license_label_evidence": "License  : CC BY-4.0",
+    "page_sha256_at_retrieval": "31397b4597f5ead7b4fcd64000d62f281e4a3fc35997eb129793b9fd39da41cf",
+    "retrieved_at": "2026-10-11T17:55:45.421478+00:00",
+    "terms_url": "https://data.worldbank.org/summary-terms-of-use",
+    "url": "https://data.worldbank.org/indicator/SP.POP.TOTL"
+  },
+  "SP.URB.TOTL.IN.ZS": {
+    "license": "CC BY-4.0",
+    "license_label_evidence": "License  : CC BY-4.0",
+    "page_sha256_at_retrieval": "aa2814239b9365796ab23eafde3933966f0e97e6fc65ad900cb4d5afc2fb1ad5",
+    "retrieved_at": "2026-10-11T17:55:45.433980+00:00",
+    "terms_url": "https://data.worldbank.org/summary-terms-of-use",
+    "url": "https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS"
+  }
+}

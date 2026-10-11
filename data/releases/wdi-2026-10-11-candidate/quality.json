@@ -1,0 +1,1418 @@
+{
+  "baseline_hash_convention": "Git LF blob; Windows checkout CRLF normalized",
+  "baseline_sha256": "330c4d45bb149d0d18a023d59498d2100d8f427fb2ebe14c931e0bf77753a791",
+  "countries": 6,
+  "coverage": [
+    {
+      "count": 26,
+      "country": "ARM",
+      "first_year": 2000,
+      "indicator": "BX.TRF.PWKR.DT.GD.ZS",
+      "latest_value": "5.38121305191014",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 22,
+      "country": "ARM",
+      "first_year": 2000,
+      "indicator": "EG.FEC.RNEW.ZS",
+      "latest_value": "9.0999999999999996",
+      "latest_year": 2021,
+      "missing_years": [
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "stale_before_2023": true
+    },
+    {
+      "count": 26,
+      "country": "ARM",
+      "first_year": 2000,
+      "indicator": "FP.CPI.TOTL.ZG",
+      "latest_value": "3.3069334107290298",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "ARM",
+      "first_year": 2000,
+      "indicator": "NY.GDP.MKTP.KD.ZG",
+      "latest_value": "7.2000000000000002",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "ARM",
+      "first_year": 2000,
+      "indicator": "NY.GDP.PCAP.KD",
+      "latest_value": "5666.1861675641603",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 20,
+      "country": "ARM",
+      "first_year": 2000,
+      "indicator": "SE.SEC.ENRR",
+      "latest_value": "90.945871410126202",
+      "latest_year": 2024,
+      "missing_years": [
+        2002,
+        2003,
+        2012,
+        2016,
+        2017,
+        2025
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 24,
+      "country": "ARM",
+      "first_year": 2001,
+      "indicator": "SI.DST.FRST.20",
+      "latest_value": "9.5999999999999996",
+      "latest_year": 2024,
+      "missing_years": [
+        2000,
+        2025
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 24,
+      "country": "ARM",
+      "first_year": 2001,
+      "indicator": "SI.POV.DDAY",
+      "latest_value": "0.80000000000000004",
+      "latest_year": 2024,
+      "missing_years": [
+        2000,
+        2025
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 24,
+      "country": "ARM",
+      "first_year": 2001,
+      "indicator": "SI.POV.GINI",
+      "latest_value": "27.399999999999999",
+      "latest_year": 2024,
+      "missing_years": [
+        2000,
+        2025
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 24,
+      "country": "ARM",
+      "first_year": 2001,
+      "indicator": "SI.POV.LMIC",
+      "latest_value": "5.7000000000000002",
+      "latest_year": 2024,
+      "missing_years": [
+        2000,
+        2025
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 19,
+      "country": "ARM",
+      "first_year": 2004,
+      "indicator": "SI.POV.NAHC",
+      "latest_value": "21.699999999999999",
+      "latest_year": 2024,
+      "missing_years": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2022,
+        2023,
+        2025
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "ARM",
+      "first_year": 2000,
+      "indicator": "SL.TLF.CACT.ZS",
+      "latest_value": "59.387999999999998",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "ARM",
+      "first_year": 2000,
+      "indicator": "SL.UEM.1524.ZS",
+      "latest_value": "26.244",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "ARM",
+      "first_year": 2000,
+      "indicator": "SL.UEM.TOTL.ZS",
+      "latest_value": "12.871",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "ARM",
+      "first_year": 2000,
+      "indicator": "SM.POP.NETM",
+      "latest_value": "-29013",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "ARM",
+      "first_year": 2000,
+      "indicator": "SP.POP.TOTL",
+      "latest_value": "3086700",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "ARM",
+      "first_year": 2000,
+      "indicator": "SP.URB.TOTL.IN.ZS",
+      "latest_value": "65.9287015589872",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "GEO",
+      "first_year": 2000,
+      "indicator": "BX.TRF.PWKR.DT.GD.ZS",
+      "latest_value": "11.1696642127497",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 22,
+      "country": "GEO",
+      "first_year": 2000,
+      "indicator": "EG.FEC.RNEW.ZS",
+      "latest_value": "25.199999999999999",
+      "latest_year": 2021,
+      "missing_years": [
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "stale_before_2023": true
+    },
+    {
+      "count": 26,
+      "country": "GEO",
+      "first_year": 2000,
+      "indicator": "FP.CPI.TOTL.ZG",
+      "latest_value": "3.8692132193968898",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "GEO",
+      "first_year": 2000,
+      "indicator": "NY.GDP.MKTP.KD.ZG",
+      "latest_value": "7.4616150415203899",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "GEO",
+      "first_year": 2000,
+      "indicator": "NY.GDP.PCAP.KD",
+      "latest_value": "6876.9850893939101",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 22,
+      "country": "GEO",
+      "first_year": 2000,
+      "indicator": "SE.SEC.ENRR",
+      "latest_value": "100.95931553676201",
+      "latest_year": 2024,
+      "missing_years": [
+        2010,
+        2011,
+        2012,
+        2025
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 25,
+      "country": "GEO",
+      "first_year": 2000,
+      "indicator": "SI.DST.FRST.20",
+      "latest_value": "7.2999999999999998",
+      "latest_year": 2024,
+      "missing_years": [
+        2025
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 25,
+      "country": "GEO",
+      "first_year": 2000,
+      "indicator": "SI.POV.DDAY",
+      "latest_value": "4.2000000000000002",
+      "latest_year": 2024,
+      "missing_years": [
+        2025
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 25,
+      "country": "GEO",
+      "first_year": 2000,
+      "indicator": "SI.POV.GINI",
+      "latest_value": "33.899999999999999",
+      "latest_year": 2024,
+      "missing_years": [
+        2025
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 25,
+      "country": "GEO",
+      "first_year": 2000,
+      "indicator": "SI.POV.LMIC",
+      "latest_value": "11",
+      "latest_year": 2024,
+      "missing_years": [
+        2025
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 21,
+      "country": "GEO",
+      "first_year": 2004,
+      "indicator": "SI.POV.NAHC",
+      "latest_value": "9.4000000000000004",
+      "latest_year": 2024,
+      "missing_years": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2025
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "GEO",
+      "first_year": 2000,
+      "indicator": "SL.TLF.CACT.ZS",
+      "latest_value": "64.311999999999998",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "GEO",
+      "first_year": 2000,
+      "indicator": "SL.UEM.1524.ZS",
+      "latest_value": "30.257999999999999",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "GEO",
+      "first_year": 2000,
+      "indicator": "SL.UEM.TOTL.ZS",
+      "latest_value": "12.097",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "GEO",
+      "first_year": 2000,
+      "indicator": "SM.POP.NETM",
+      "latest_value": "1283",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "GEO",
+      "first_year": 2000,
+      "indicator": "SP.POP.TOTL",
+      "latest_value": "3935766",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "GEO",
+      "first_year": 2000,
+      "indicator": "SP.URB.TOTL.IN.ZS",
+      "latest_value": "61.178136409040597",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "KAZ",
+      "first_year": 2000,
+      "indicator": "BX.TRF.PWKR.DT.GD.ZS",
+      "latest_value": "0.077312565049040494",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 22,
+      "country": "KAZ",
+      "first_year": 2000,
+      "indicator": "EG.FEC.RNEW.ZS",
+      "latest_value": "2",
+      "latest_year": 2021,
+      "missing_years": [
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "stale_before_2023": true
+    },
+    {
+      "count": 26,
+      "country": "KAZ",
+      "first_year": 2000,
+      "indicator": "FP.CPI.TOTL.ZG",
+      "latest_value": "11.3789456104214",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "KAZ",
+      "first_year": 2000,
+      "indicator": "NY.GDP.MKTP.KD.ZG",
+      "latest_value": "6.5",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "KAZ",
+      "first_year": 2000,
+      "indicator": "NY.GDP.PCAP.KD",
+      "latest_value": "12492.1392679131",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 18,
+      "country": "KAZ",
+      "first_year": 2000,
+      "indicator": "SE.SEC.ENRR",
+      "latest_value": "97.616731111790202",
+      "latest_year": 2025,
+      "missing_years": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2007,
+        2008,
+        2009
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 21,
+      "country": "KAZ",
+      "first_year": 2001,
+      "indicator": "SI.DST.FRST.20",
+      "latest_value": "9.8000000000000007",
+      "latest_year": 2021,
+      "missing_years": [
+        2000,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "stale_before_2023": true
+    },
+    {
+      "count": 21,
+      "country": "KAZ",
+      "first_year": 2001,
+      "indicator": "SI.POV.DDAY",
+      "latest_value": "0",
+      "latest_year": 2021,
+      "missing_years": [
+        2000,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "stale_before_2023": true
+    },
+    {
+      "count": 21,
+      "country": "KAZ",
+      "first_year": 2001,
+      "indicator": "SI.POV.GINI",
+      "latest_value": "29.199999999999999",
+      "latest_year": 2021,
+      "missing_years": [
+        2000,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "stale_before_2023": true
+    },
+    {
+      "count": 21,
+      "country": "KAZ",
+      "first_year": 2001,
+      "indicator": "SI.POV.LMIC",
+      "latest_value": "0.29999999999999999",
+      "latest_year": 2021,
+      "missing_years": [
+        2000,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "stale_before_2023": true
+    },
+    {
+      "count": 7,
+      "country": "KAZ",
+      "first_year": 2018,
+      "indicator": "SI.POV.NAHC",
+      "latest_value": "5",
+      "latest_year": 2024,
+      "missing_years": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2025
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "KAZ",
+      "first_year": 2000,
+      "indicator": "SL.TLF.CACT.ZS",
+      "latest_value": "67.769999999999996",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "KAZ",
+      "first_year": 2000,
+      "indicator": "SL.UEM.1524.ZS",
+      "latest_value": "3.806",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "KAZ",
+      "first_year": 2000,
+      "indicator": "SL.UEM.TOTL.ZS",
+      "latest_value": "4.7709999999999999",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "KAZ",
+      "first_year": 2000,
+      "indicator": "SM.POP.NETM",
+      "latest_value": "-8834",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "KAZ",
+      "first_year": 2000,
+      "indicator": "SP.POP.TOTL",
+      "latest_value": "20843754",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "KAZ",
+      "first_year": 2000,
+      "indicator": "SP.URB.TOTL.IN.ZS",
+      "latest_value": "62.385556950798701",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 25,
+      "country": "KGZ",
+      "first_year": 2000,
+      "indicator": "BX.TRF.PWKR.DT.GD.ZS",
+      "latest_value": "17.604244729040701",
+      "latest_year": 2024,
+      "missing_years": [
+        2025
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 22,
+      "country": "KGZ",
+      "first_year": 2000,
+      "indicator": "EG.FEC.RNEW.ZS",
+      "latest_value": "27.600000000000001",
+      "latest_year": 2021,
+      "missing_years": [
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "stale_before_2023": true
+    },
+    {
+      "count": 26,
+      "country": "KGZ",
+      "first_year": 2000,
+      "indicator": "FP.CPI.TOTL.ZG",
+      "latest_value": "8.2149601340632508",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "KGZ",
+      "first_year": 2000,
+      "indicator": "NY.GDP.MKTP.KD.ZG",
+      "latest_value": "11.096020335713201",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "KGZ",
+      "first_year": 2000,
+      "indicator": "NY.GDP.PCAP.KD",
+      "latest_value": "1555.4444955048",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 24,
+      "country": "KGZ",
+      "first_year": 2000,
+      "indicator": "SE.SEC.ENRR",
+      "latest_value": "91.725884895292893",
+      "latest_year": 2025,
+      "missing_years": [
+        2008,
+        2022
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 25,
+      "country": "KGZ",
+      "first_year": 2000,
+      "indicator": "SI.DST.FRST.20",
+      "latest_value": "9.5999999999999996",
+      "latest_year": 2024,
+      "missing_years": [
+        2025
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 25,
+      "country": "KGZ",
+      "first_year": 2000,
+      "indicator": "SI.POV.DDAY",
+      "latest_value": "2.2000000000000002",
+      "latest_year": 2024,
+      "missing_years": [
+        2025
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 25,
+      "country": "KGZ",
+      "first_year": 2000,
+      "indicator": "SI.POV.GINI",
+      "latest_value": "27.5",
+      "latest_year": 2024,
+      "missing_years": [
+        2025
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 25,
+      "country": "KGZ",
+      "first_year": 2000,
+      "indicator": "SI.POV.LMIC",
+      "latest_value": "12.5",
+      "latest_year": 2024,
+      "missing_years": [
+        2025
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 3,
+      "country": "KGZ",
+      "first_year": 2023,
+      "indicator": "SI.POV.NAHC",
+      "latest_value": "24",
+      "latest_year": 2025,
+      "missing_years": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "KGZ",
+      "first_year": 2000,
+      "indicator": "SL.TLF.CACT.ZS",
+      "latest_value": "57.366",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "KGZ",
+      "first_year": 2000,
+      "indicator": "SL.UEM.1524.ZS",
+      "latest_value": "8.2279999999999998",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "KGZ",
+      "first_year": 2000,
+      "indicator": "SL.UEM.TOTL.ZS",
+      "latest_value": "3.5259999999999998",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "KGZ",
+      "first_year": 2000,
+      "indicator": "SM.POP.NETM",
+      "latest_value": "1815",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "KGZ",
+      "first_year": 2000,
+      "indicator": "SP.POP.TOTL",
+      "latest_value": "7343064",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "KGZ",
+      "first_year": 2000,
+      "indicator": "SP.URB.TOTL.IN.ZS",
+      "latest_value": "34.746353726105703",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 24,
+      "country": "TJK",
+      "first_year": 2002,
+      "indicator": "BX.TRF.PWKR.DT.GD.ZS",
+      "latest_value": "57.664846257347598",
+      "latest_year": 2025,
+      "missing_years": [
+        2000,
+        2001
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 22,
+      "country": "TJK",
+      "first_year": 2000,
+      "indicator": "EG.FEC.RNEW.ZS",
+      "latest_value": "34.899999999999999",
+      "latest_year": 2021,
+      "missing_years": [
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "stale_before_2023": true
+    },
+    {
+      "count": 25,
+      "country": "TJK",
+      "first_year": 2001,
+      "indicator": "FP.CPI.TOTL.ZG",
+      "latest_value": "3.3887584624354901",
+      "latest_year": 2025,
+      "missing_years": [
+        2000
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "TJK",
+      "first_year": 2000,
+      "indicator": "NY.GDP.MKTP.KD.ZG",
+      "latest_value": "8.4000005339007497",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "TJK",
+      "first_year": 2000,
+      "indicator": "NY.GDP.PCAP.KD",
+      "latest_value": "1592.5865137575299",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 19,
+      "country": "TJK",
+      "first_year": 2000,
+      "indicator": "SE.SEC.ENRR",
+      "latest_value": "86.903525781926405",
+      "latest_year": 2024,
+      "missing_years": [
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2025
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 9,
+      "country": "TJK",
+      "first_year": 2003,
+      "indicator": "SI.DST.FRST.20",
+      "latest_value": "7.0999999999999996",
+      "latest_year": 2024,
+      "missing_years": [
+        2000,
+        2001,
+        2002,
+        2005,
+        2006,
+        2008,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2025
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 9,
+      "country": "TJK",
+      "first_year": 2003,
+      "indicator": "SI.POV.DDAY",
+      "latest_value": "6.0999999999999996",
+      "latest_year": 2024,
+      "missing_years": [
+        2000,
+        2001,
+        2002,
+        2005,
+        2006,
+        2008,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2025
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 9,
+      "country": "TJK",
+      "first_year": 2003,
+      "indicator": "SI.POV.GINI",
+      "latest_value": "36.100000000000001",
+      "latest_year": 2024,
+      "missing_years": [
+        2000,
+        2001,
+        2002,
+        2005,
+        2006,
+        2008,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2025
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 9,
+      "country": "TJK",
+      "first_year": 2003,
+      "indicator": "SI.POV.LMIC",
+      "latest_value": "16.899999999999999",
+      "latest_year": 2024,
+      "missing_years": [
+        2000,
+        2001,
+        2002,
+        2005,
+        2006,
+        2008,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2025
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 4,
+      "country": "TJK",
+      "first_year": 2021,
+      "indicator": "SI.POV.NAHC",
+      "latest_value": "19.800000000000001",
+      "latest_year": 2024,
+      "missing_years": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2025
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "TJK",
+      "first_year": 2000,
+      "indicator": "SL.TLF.CACT.ZS",
+      "latest_value": "38.276000000000003",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "TJK",
+      "first_year": 2000,
+      "indicator": "SL.UEM.1524.ZS",
+      "latest_value": "14.593999999999999",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "TJK",
+      "first_year": 2000,
+      "indicator": "SL.UEM.TOTL.ZS",
+      "latest_value": "6.931",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "TJK",
+      "first_year": 2000,
+      "indicator": "SM.POP.NETM",
+      "latest_value": "-21606",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "TJK",
+      "first_year": 2000,
+      "indicator": "SP.POP.TOTL",
+      "latest_value": "10786734",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "TJK",
+      "first_year": 2000,
+      "indicator": "SP.URB.TOTL.IN.ZS",
+      "latest_value": "26.164762708529999",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 21,
+      "country": "UZB",
+      "first_year": 2005,
+      "indicator": "BX.TRF.PWKR.DT.GD.ZS",
+      "latest_value": "14.350637840625099",
+      "latest_year": 2025,
+      "missing_years": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 22,
+      "country": "UZB",
+      "first_year": 2000,
+      "indicator": "EG.FEC.RNEW.ZS",
+      "latest_value": "1",
+      "latest_year": 2021,
+      "missing_years": [
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "stale_before_2023": true
+    },
+    {
+      "count": 15,
+      "country": "UZB",
+      "first_year": 2011,
+      "indicator": "FP.CPI.TOTL.ZG",
+      "latest_value": "8.7963089049110703",
+      "latest_year": 2025,
+      "missing_years": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "UZB",
+      "first_year": 2000,
+      "indicator": "NY.GDP.MKTP.KD.ZG",
+      "latest_value": "7.6996247793291301",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "UZB",
+      "first_year": 2000,
+      "indicator": "NY.GDP.PCAP.KD",
+      "latest_value": "4732.6783523613703",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 24,
+      "country": "UZB",
+      "first_year": 2000,
+      "indicator": "SE.SEC.ENRR",
+      "latest_value": "98.119841491386396",
+      "latest_year": 2025,
+      "missing_years": [
+        2001,
+        2002
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 8,
+      "country": "UZB",
+      "first_year": 2000,
+      "indicator": "SI.DST.FRST.20",
+      "latest_value": "7",
+      "latest_year": 2025,
+      "missing_years": [
+        2001,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 8,
+      "country": "UZB",
+      "first_year": 2000,
+      "indicator": "SI.POV.DDAY",
+      "latest_value": "2.2999999999999998",
+      "latest_year": 2025,
+      "missing_years": [
+        2001,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 8,
+      "country": "UZB",
+      "first_year": 2000,
+      "indicator": "SI.POV.GINI",
+      "latest_value": "32.700000000000003",
+      "latest_year": 2025,
+      "missing_years": [
+        2001,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 8,
+      "country": "UZB",
+      "first_year": 2000,
+      "indicator": "SI.POV.LMIC",
+      "latest_value": "4",
+      "latest_year": 2025,
+      "missing_years": [
+        2001,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 14,
+      "country": "UZB",
+      "first_year": 2001,
+      "indicator": "SI.POV.NAHC",
+      "latest_value": "5.7999999999999998",
+      "latest_year": 2025,
+      "missing_years": [
+        2000,
+        2006,
+        2007,
+        2008,
+        2009,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "UZB",
+      "first_year": 2000,
+      "indicator": "SL.TLF.CACT.ZS",
+      "latest_value": "57.499000000000002",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "UZB",
+      "first_year": 2000,
+      "indicator": "SL.UEM.1524.ZS",
+      "latest_value": "11.381",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "UZB",
+      "first_year": 2000,
+      "indicator": "SL.UEM.TOTL.ZS",
+      "latest_value": "4.6219999999999999",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "UZB",
+      "first_year": 2000,
+      "indicator": "SM.POP.NETM",
+      "latest_value": "-6987",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "UZB",
+      "first_year": 2000,
+      "indicator": "SP.POP.TOTL",
+      "latest_value": "37053428",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    },
+    {
+      "count": 26,
+      "country": "UZB",
+      "first_year": 2000,
+      "indicator": "SP.URB.TOTL.IN.ZS",
+      "latest_value": "51.017349508429902",
+      "latest_year": 2025,
+      "missing_years": [],
+      "stale_before_2023": false
+    }
+  ],
+  "historical_pipeline_reconstructed": false,
+  "indicators": 17,
+  "null_records_retained_in_raw": 337,
+  "observations_sha256": "2491a8a141078d7ed62ce6306236837127f2c531d6066f5a81596e137aa2c5ae",
+  "publication_approved": false,
+  "rows": 2315,
+  "validation": "PASS"
+}

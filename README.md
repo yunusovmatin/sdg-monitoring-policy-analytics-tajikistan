@@ -1,30 +1,46 @@
-# SDG Monitoring & Policy Analytics — Tajikistan
+# SDG Monitoring & Policy Analytics - Tajikistan
 
-**Author: Matin Yunusov.** Independent portfolio prototype. Not affiliated with, commissioned by, endorsed by, officially reviewed by or operated by UNDP.
+**Matin Yunusov - Independent Analytical Project. Not affiliated with or endorsed by UNDP.**
 
-An interactive React/TypeScript dashboard for examining a bundled World Bank WDI snapshot: 17 indicators, six countries and 2,160 observations within the 2000–2023 envelope. Includes descriptive policy analysis, country comparisons, CSV exports and a transparently hypothetical scenario explorer. Live refresh is separate and labels each refreshed series; the scenario keeps bundled historical baselines.
+v2 review candidate on `upgrade/production-quality-v2`. Public production remains frozen **v1.0.0**, commit `207795554b4a9c8d9c8fcdd9ea9994664f41493e`.
 
-## Limitations
+The review application uses captured release **wdi-2026-10-11-candidate**: 17 WDI indicators, six countries, 2,315 observations within 2000-2025. Dashboard, reports, scenario and exports use that same candidate, with observation years and provenance. This is an internal review candidate, not an approved or institutionally operated service.
 
-- Scenario outputs illustrate assumptions and arithmetic; they are not forecasts, empirical policy effects, attributable impacts or programme budgets.
-- Regional values are unverified demonstration data, not authenticated official regional statistics or geographic planning evidence.
-- Original policy Markdown sources are missing. Revised PDFs remain unavailable; download controls are disabled. Archived legacy PDFs are not current approved reports and are excluded from publication.
-- Original historical ETL scripts are not supplied. Accessibility checks are partial, not certification.
+## Statistical boundaries
 
-See [numerical reconciliation](docs/NUMERICAL_RECONCILIATION.md), [scenario assumptions](docs/SCENARIO_ASSUMPTIONS.md), [validation](FINAL_VALIDATION_REPORT.md) and [PDF source status](docs/SOURCES_REQUIRED.md).
+- International poverty uses captured current $3.00 / $4.20 definitions in 2021 PPP. The untouched historical snapshot has unresolved numeric extraction vintage and stale 2017 PPP labels; it is not spliced into this candidate.
+- Renewable energy share is SDG 7.2.1. The register separates exact concepts, aligned proxies and contextual statistics; WDI coverage does not certify a complete national SDG series.
+- The scenario is educational assumed arithmetic, not a forecast, estimated policy impact, confidence interval or costed programme. It uses the latest common-year candidate baseline and fixed hypothetical assumptions.
+- Unverified regional rates are excluded from the analytical view. Official regional population evidence is recorded separately with its distinct geography/date/units; it does not validate the former rates.
+- Original report sources remain missing. New canonical Markdown/PDF/HTML content is reconstructed, not recovered. Archived legacy reports and illustrations are outside public frontend output.
+- External statistical, accessibility, security and institutional signoffs remain pending. See the candid readiness assessment before any release decision.
 
-## Run and verify
+## Reproduce and verify
 
-Use Node.js 24 and the pinned pnpm 10.4.1:
+Use Node.js 24.14.0, Python 3.14.3 for the standard-library data pipeline, and pinned pnpm 10.34.6.
 
 ```sh
-npx --yes pnpm@10.4.1 install --frozen-lockfile
-npx --yes pnpm@10.4.1 dev
-npx --yes pnpm@10.4.1 check
-npx --yes pnpm@10.4.1 exec vitest run
-npx --yes pnpm@10.4.1 build
+npx --yes pnpm@10.34.6 install --frozen-lockfile
+npx --yes pnpm@10.34.6 verify
+npx --yes pnpm@10.34.6 exec playwright install chromium
+npx --yes pnpm@10.34.6 test:e2e
+python -m unittest discover -s scripts -p "test_wdi_pipeline.py"
+python scripts/wdi_pipeline.py --help
 ```
 
-Vite configuration lives at the repository root; the application root is `client/` and the deployable frontend output is `dist/public/`. Vercel uses the repository root, the explicit pinned install/build commands in `vercel.json`, and static frontend output. Direct `/dashboard`, `/policy-brief` and `/methodology` requests rewrite to the SPA entry point. The bundled Express server is not required for static frontend hosting; optional live refresh requests the public World Bank API from the browser.
+Data raw responses, manifest, checksums, deterministic transformation and differences are in `data/releases/wdi-2026-10-11-candidate/`. See [data refresh runbook](docs/DATA_REFRESH_RUNBOOK.md) for exact offline reproduction and candidate-refresh commands. Report sources and pinned generator are in `docs/reports/` and `scripts/generate_reports.py`.
 
-Private configuration, development dependencies, review archives and historical PDFs are excluded from Git/public deployment. Manus is acknowledged as a development tool. Analytical baseline: `709219fc3d9fd6b470079ef5acfad32cb79ba4ad`; publication commits preserve that work with documented release configuration and the actual repository link.
+Vite config is at the repository root, the app under `client/`, and frontend output `dist/public/`. The existing Vercel project uses the explicit build/output config and direct-route rewrites. No production alias or main branch should change without author approval. No tracking or paid monitoring has been introduced.
+
+## Review documents
+
+- [Baseline findings](docs/PRODUCTION_READINESS_BASELINE.md)
+- [Indicator register](docs/INDICATOR_REGISTER.csv)
+- [Poverty vintage reconciliation](docs/DATA_VINTAGE_AND_POVERTY_RECONCILIATION.md)
+- [Canonical Policy Brief](docs/reports/POLICY_BRIEF.md) and [Methodology](docs/reports/METHODOLOGY.md)
+- [Regional source investigation](docs/REGIONAL_SOURCE_INVESTIGATION.md)
+- [Operations](docs/OPERATIONS_RUNBOOK.md), [security](docs/SECURITY_ASSESSMENT.md), [accessibility](docs/ACCESSIBILITY_ASSESSMENT.md)
+- [External review and signoff](docs/EXTERNAL_REVIEW_AND_SIGNOFF.md)
+- [Production-readiness assessment](docs/PRODUCTION_READINESS_REPORT.md)
+
+Historical v1 reports are retained as archival records, not current evidence. Private configuration, local review archives, generated dependencies and test artifacts are excluded from publication.
