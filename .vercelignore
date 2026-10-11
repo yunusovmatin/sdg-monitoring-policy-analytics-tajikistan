@@ -1,0 +1,8 @@
+node_modules
+.git
+.vercel
+.project-config.json
+verification
+docs/reference
+.manus-logs
+Local Files

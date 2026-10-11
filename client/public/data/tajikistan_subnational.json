@@ -1,0 +1,108 @@
+{
+  "metadata": {
+    "source": "Unverified illustrative sample; original institutional attribution not substantiated",
+    "year": 2024,
+    "note": "Original package claimed national-line poverty and registered unemployment in 2024 without record-level provenance. Regional, district, youth and population values are unverified and not harmonized with the national WDI series.",
+    "original_source_claim": "World Bank & Agency on Statistics under President of the Republic of Tajikistan",
+    "status": "illustrative_unverified"
+  },
+  "regions": [
+    {
+      "id": "TJ.DU",
+      "name": "Dushanbe",
+      "type": "Capital City",
+      "poverty_rate": 18.4,
+      "unemployment_rate": 5.2,
+      "youth_unemployment_rate": 12.5,
+      "population": 1201800,
+      "coordinates": [
+        38.5598,
+        68.787
+      ]
+    },
+    {
+      "id": "TJ.SU",
+      "name": "Sughd",
+      "type": "Region",
+      "poverty_rate": 22.1,
+      "unemployment_rate": 4.8,
+      "youth_unemployment_rate": 14.2,
+      "population": 2823300,
+      "coordinates": [
+        40.2,
+        69.5
+      ]
+    },
+    {
+      "id": "TJ.KT",
+      "name": "Khatlon",
+      "type": "Region",
+      "poverty_rate": 31.5,
+      "unemployment_rate": 6.1,
+      "youth_unemployment_rate": 18.7,
+      "population": 3530400,
+      "coordinates": [
+        37.8,
+        68.8
+      ]
+    },
+    {
+      "id": "TJ.GB",
+      "name": "Gorno-Badakhshan",
+      "type": "Autonomous Region",
+      "poverty_rate": 29.7,
+      "unemployment_rate": 7.4,
+      "youth_unemployment_rate": 21.3,
+      "population": 230100,
+      "coordinates": [
+        38.0,
+        73.0
+      ]
+    },
+    {
+      "id": "TJ.RA",
+      "name": "Districts of Republican Subordination",
+      "type": "Region",
+      "poverty_rate": 25.3,
+      "unemployment_rate": 5.5,
+      "youth_unemployment_rate": 15.8,
+      "population": 2101000,
+      "coordinates": [
+        39.0,
+        70.0
+      ]
+    }
+  ],
+  "districts_sample": [
+    {
+      "name": "Khujand",
+      "region": "Sughd",
+      "poverty_rate": 14.2,
+      "risk_level": "Low"
+    },
+    {
+      "name": "Kulob",
+      "region": "Khatlon",
+      "poverty_rate": 34.1,
+      "risk_level": "High"
+    },
+    {
+      "name": "Khorog",
+      "region": "Gorno-Badakhshan",
+      "poverty_rate": 26.5,
+      "risk_level": "Medium"
+    },
+    {
+      "name": "Rasht",
+      "region": "Districts of Republican Subordination",
+      "poverty_rate": 38.2,
+      "risk_level": "Very High"
+    },
+    {
+      "name": "Isfara",
+      "region": "Sughd",
+      "poverty_rate": 19.8,
+      "risk_level": "Medium"
+    }
+  ]
+}
