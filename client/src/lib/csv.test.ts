@@ -10,7 +10,7 @@ describe("dashboard CSV data", () => {
   });
 
   it("loads all supplied indicators without shifting numerical columns", () => {
-    const [headers, ...rows] = parseCsv(readFileSync("client/public/data/processed/sdg_tjk_tidy.csv", "utf8"));
+    const [headers, ...rows] = parseCsv(readFileSync("data/legacy/v1.0.0/processed/sdg_tjk_tidy.csv", "utf8"));
     expect(rows.length).toBeGreaterThan(1000);
     for (const row of rows) {
       expect(row).toHaveLength(headers.length);

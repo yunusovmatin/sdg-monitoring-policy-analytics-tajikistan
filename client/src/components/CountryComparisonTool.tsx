@@ -10,6 +10,7 @@ import {
 import { ArrowRight, Download, TrendingDown, TrendingUp } from "lucide-react";
 import { useState } from "react";
 import { type DataPoint, latest, comparisonRows, comparisonCsv, displayUnit } from "@/lib/data";
+import { calendarSeries } from "@/lib/timeSeries";
 import { comparableGap, INCOMPATIBLE_CROSS_COUNTRY } from "@/lib/governance";
 import { downloadCsv } from "@/lib/download";
 import {
@@ -43,6 +44,7 @@ export default function CountryComparisonTool({ data, indicators }: ComparisonTo
   ];
 
   const chartData=comparisonRows(data,selectedIndicator,countryA,countryB);
+  const timeline=calendarSeries(data,selectedIndicator,Array.from(new Set([countryA,countryB])));
   const latestA=latest(data,selectedIndicator,countryA), latestB=latest(data,selectedIndicator,countryB);
   const gap=comparableGap(latestA,latestB);
   const unit=displayUnit(selectedIndicator,indicators.find(i=>i.code===selectedIndicator)?.unit ?? "");
@@ -51,7 +53,7 @@ export default function CountryComparisonTool({ data, indicators }: ComparisonTo
   const handleExport=()=>downloadCsv(comparisonCsv(data,selectedIndicator,countryA,countryB),`comparison_${countryA}_${countryB}_${selectedIndicator}.csv`);
 
   return (
-    <Card className="p-6">
+    <Card className="p-6" data-testid="comparison-time-series">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
         <div>
           <h2 className="text-lg font-bold text-gray-900">Interactive Comparison Tool</h2>
@@ -108,6 +110,8 @@ export default function CountryComparisonTool({ data, indicators }: ComparisonTo
       <p className="mb-4 text-sm font-medium">{INCOMPATIBLE_CROSS_COUNTRY.has(selectedIndicator) ? "National poverty lines or income/consumption survey concepts differ by country. No cross-country numeric gap is computed; consult observation footnotes." : "Compare definitions, units and observation years before interpreting differences. This view uses the same captured candidate release."}</p>
       <details className="mb-4 text-sm"><summary>Comparison observation footnotes</summary>{data.filter(d=>d.indicator_code===selectedIndicator && [countryA,countryB].includes(d.country_code)).map(d=><p key={`${d.country_code}-${d.year}`} className="my-2 break-words">{d.country_name}, {d.year}: {d.footnote || "No observation footnote supplied."}</p>)}</details>
       <details className="mb-4 text-sm"><summary className="cursor-pointer">Comparison chart values (text alternative)</summary><div className="overflow-x-auto table-scroll" tabIndex={0} aria-label="Scrollable observation table"><table className="w-full text-left"><caption>{indicators.find(i=>i.code===selectedIndicator)?.name}; {unit}</caption><thead><tr><th scope="col">Year</th><th scope="col">{countryA}</th><th scope="col">{countryB}</th></tr></thead><tbody>{chartData.map(row=><tr key={row.year}><th scope="row">{row.year}</th><td>{row[countryA] ?? "Missing"}</td><td>{row[countryB] ?? "Missing"}</td></tr>)}</tbody></table></div></details>
+      <p className="mb-4 text-sm">Years use calendar spacing. Dots are source observations; missing years and documented measurement breaks are not joined.</p>
+      {timeline.breaks.length > 0 && <ul className="mb-4 text-sm" aria-label="Comparison time-series discontinuities">{timeline.breaks.map((b,i)=><li key={i}>{b.country}, {b.year}: {b.reason}</li>)}</ul>}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Key Metrics Panel */}
         <div className="space-y-6">
@@ -153,10 +157,11 @@ export default function CountryComparisonTool({ data, indicators }: ComparisonTo
         {/* Chart Area */}
         <div className="lg:col-span-2 h-[350px]">
           <ResponsiveContainer width="100%" height="100%">
-            <LineChart data={chartData} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+            <LineChart data={timeline.rows} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
               <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e5e7eb" />
               <XAxis 
-                dataKey="year" 
+                dataKey="year"
+                type="number" domain={["dataMin", "dataMax"]} allowDecimals={false}
                 axisLine={false} 
                 tickLine={false} 
                 tick={{ fill: '#6b7280', fontSize: 12 }}
@@ -171,26 +176,11 @@ export default function CountryComparisonTool({ data, indicators }: ComparisonTo
                 contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
               />
               <Legend verticalAlign="top" height={36} />
-              <Line 
-                type="linear"
-                isAnimationActive={false}
-                dataKey={countryA} 
-                name={countries.find(c => c.code === countryA)?.name}
-                stroke="#2563eb" 
-                strokeWidth={3} 
-                dot={{ r: 4, fill: "#2563eb", strokeWidth: 2, stroke: "#fff" }}
-                activeDot={{ r: 6 }}
-              />
-              <Line 
-                type="linear"
-                isAnimationActive={false}
-                dataKey={countryB} 
-                name={countries.find(c => c.code === countryB)?.name}
-                stroke="#10b981" 
-                strokeWidth={3} 
-                dot={{ r: 4, fill: "#10b981", strokeWidth: 2, stroke: "#fff" }}
-                activeDot={{ r: 6 }}
-              />
+              {timeline.segments.map(segment => <Line key={segment.key} type="linear"
+                isAnimationActive={false} dataKey={segment.key} name={segment.name}
+                legendType={segment.segment === 0 ? "line" : "none"} connectNulls={false}
+                stroke={segment.country === countryA ? "#2563eb" : "#10b981"} strokeWidth={3}
+                dot={{r:4,strokeWidth:2,stroke:"#fff"}} activeDot={{r:6}} />)}
             </LineChart>
           </ResponsiveContainer>
         </div>

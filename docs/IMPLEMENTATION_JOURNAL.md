@@ -13,3 +13,12 @@ Phase 4: newly authored canonical templates generate resolved Markdown/JSON/PDF 
 Phase 5: dependency vulnerabilities remediated, legacy tooling/analytics removed, no external fonts, scoped CSP and CI added. Snapshot checksum verified before parsing, explicit retry and no zero fabrication. Expanded unit/data/browser tests. Cold throttled dashboard initially missed4s LCP; route/lazy chart loading reduced measuredLCP to3.140s in an intermediate passing run. Manual narrow-screen keyboard check found lost focus on deferred calculator activation; fixed stable region focus and added keyboard-accessible table scrolling. Final integration receipt supersedes earlier runs. Actual local restoration of v1 CSV/scenario/config succeeded after documented Windows CRLF-to-Git-LF normalization; hosted rollback not performed.
 
 Phase 6: external review/signoff checklist prepared. Statistical, policy, real assistive-technology, security and institutional review remain pending. No institution contacted, paid resources enabled, main merged, production deployed or v1 tag moved.
+
+
+## Final corrections — 12 October 2026
+
+A clean checkpoint preserves reviewed rc.1 commit 1d3916d0746097e8d6f91374dd5a488f6afc4601. Nine legacy raw/processed files move outside Vite public assets with byte-preservation checks and a build allowlist. Chart corrections use numeric calendar spacing, null missing years and separate segments at gaps/welfare/survey boundaries. The source review clarifies Tajikistan modernized-HBS2021+, and Uzbekistan's adjacent2011/2012 national-poverty spells require an explicit break. Values/formulas/snapshot remain unchanged.
+
+PDF metadata, bookmarks, citation links and footer artifacts improve navigation; four fresh pages are visually inspected. They remain untagged, with accessible HTML as the alternative. Full candidate recovery/raw reconciliation and the immutable-refresh refusal are tested safely. Monitoring remains manual and required branch-check enforcement unverified.
+
+Vercel account/project and preview SSO protection are confirmed. Connector access fails403 at read_protection_bypass. CLI63.1.2 default configuration failsEXDEV; a private project-local configuration avoids that filesystem issue and whoami reports Logged out. No protection is weakened or credential printed. Corrected regression, publishedSHA, hostedCI and newpreview metadata are recorded in final handoff receipts. Production/main/v1tag remain frozen.

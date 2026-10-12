@@ -1,4 +1,4 @@
-"""New canonical reports from pinned legacy evidence; not recovered historical sources.
+"""New canonical reports from the pinned candidate; not recovered historical sources.
 
 Run: python -m pip install -r scripts/requirements-reports.txt
      python scripts/generate_reports.py --evidence ../evidence/reports
@@ -19,7 +19,8 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.enums import TA_LEFT
 from reportlab.lib.pagesizes import A4
 from reportlab.platypus import SimpleDocTemplate, Paragraph
-from pypdf import PdfReader
+from pypdf import PdfReader, PdfWriter
+from pypdf.generic import NameObject, TextStringObject, BooleanObject, DictionaryObject
 
 ROOT = Path(__file__).resolve().parents[1]
 RELEASE_ID = 'wdi-2026-10-11-candidate'
@@ -97,21 +98,73 @@ def generate_pdf(path, title, blocks):
     styles.add(ParagraphStyle(name='ReportBody',fontName='Helvetica',fontSize=9.5,leading=12.8,spaceAfter=6,splitLongWords=True,alignment=TA_LEFT))
     styles.add(ParagraphStyle(name='ReportBullet',parent=styles['ReportBody'],leftIndent=12,firstLineIndent=-8))
     def clean(text):
-        return html.escape(text).replace('&amp;#','&#')
+        # Keep the exact readable URL while making source citations keyboard-followable.
+        parts=[];previous=0
+        for match in re.finditer(r'https://[^\s]+',text):
+            url=match.group().rstrip('.,;')
+            parts.append(html.escape(text[previous:match.start()]))
+            parts.append(f'<link href="{html.escape(url,quote=True)}" color="#15344b"><u>{html.escape(url)}</u></link>')
+            parts.append(html.escape(match.group()[len(url):]));previous=match.end()
+        parts.append(html.escape(text[previous:]));return ''.join(parts)
     story=[Paragraph(clean(title),styles['ReportTitle'])]
     for block in blocks:
         style=styles['ReportHeading' if block['type']=='heading' else 'ReportBullet' if block['type']=='bullet' else 'ReportBody']
         story.append(Paragraph(('- ' if block['type']=='bullet' else '')+clean(block['text']),style))
     def footer(canvas,doc):
+        # Identify decoration as an artifact without falsely marking the document tagged.
+        canvas._code.append('/Artifact BMC')
         canvas.saveState()
         canvas.setStrokeColor(colors.HexColor('#c4d2db'));canvas.line(48,42,A4[0]-48,42)
         canvas.setFont('Helvetica',7);canvas.setFillColor(colors.HexColor('#435565'))
         canvas.drawString(48,30,'Matin Yunusov | Independent review draft | No institutional endorsement')
         canvas.drawRightString(A4[0]-48,30,f'{doc.page}')
         canvas.restoreState()
-    SimpleDocTemplate(str(path),pagesize=A4,rightMargin=48,leftMargin=48,topMargin=45,bottomMargin=57,
+        canvas._code.append('EMC')
+    class ReportDocument(SimpleDocTemplate):
+        def afterFlowable(self,flowable):
+            if isinstance(flowable,Paragraph) and flowable.style.name in ('ReportTitle','ReportHeading'):
+                key=f'section-{len(getattr(self,"_report_headings",[]))}'
+                self._report_headings=getattr(self,'_report_headings',[])+[key]
+                self.canv.bookmarkPage(key,fit='FitH',top=self.frame._y+flowable.height)
+                self.canv.addOutlineEntry(flowable.getPlainText(),key,level=0 if flowable.style.name=='ReportTitle' else 1,closed=False)
+    ReportDocument(str(path),pagesize=A4,rightMargin=48,leftMargin=48,topMargin=45,bottomMargin=57,
         title=title,author='Matin Yunusov',subject='Independent prototype; canonical newly authored review report',
         invariant=1).build(story,onFirstPage=footer,onLaterPages=footer)
+    # Catalog language and displayed title support navigation. They do not create
+    # semantic heading/list tags or certify reading order/PDF-UA conformance.
+    writer=PdfWriter();writer.clone_document_from_reader(PdfReader(io.BytesIO(path.read_bytes())))
+    writer._root_object[NameObject('/Lang')]=TextStringObject('en')
+    writer._root_object[NameObject('/ViewerPreferences')]=DictionaryObject({NameObject('/DisplayDocTitle'):BooleanObject(True)})
+    writer._root_object[NameObject('/PageMode')]=NameObject('/UseOutlines')
+    with path.open('wb') as output:writer.write(output)
+
+def accessibility_checks(reader,title,blocks):
+    root=reader.trailer['/Root']
+    def flatten(outline):
+        result=[]
+        for item in outline:
+            if isinstance(item,list):result.extend(flatten(item))
+            else:result.append(item.title)
+        return result
+    headings=[title]+[b['text'] for b in blocks if b['type']=='heading']
+    outlines=flatten(reader.outline)
+    assert outlines==headings, 'Missing or incorrect heading navigation order'
+    assert root.get('/Lang')=='en' and reader.metadata.title==title
+    assert bool(root['/ViewerPreferences']['/DisplayDocTitle'])
+    urls=[];artifact_pages=0
+    for page in reader.pages:
+        if b'/Artifact BMC' in page.get_contents().get_data():artifact_pages+=1
+        for reference in page.get('/Annots',[]):
+            annotation=reference.get_object();action=annotation.get('/A',{})
+            if action.get('/S')=='/URI':urls.append(str(action['/URI']))
+    expected_urls={m.group().rstrip('.,;') for b in blocks for m in re.finditer(r'https://[^\s]+',b['text'])}
+    assert expected_urls <= set(urls), 'PDF source link missing'
+    assert all(url.startswith('https://') for url in urls)
+    assert artifact_pages==len(reader.pages)
+    return {'language':'en','display_document_title':True,'heading_bookmarks':len(outlines),'source_link_annotations':len(urls),
+        'footer_artifact_pages':artifact_pages,'semantic_structure_tree_present':bool(root.get('/StructTreeRoot')),
+        'pdf_ua_certified':False,'screen_reader_tested':False,'reading_order_check':'All canonical body blocks occur in source order after footer removal; this is extraction consistency, not semantic assistive-technology validation',
+        'outstanding':'No H1/H2/P/L/LI structure tree; link annotations not structurally associated with tags; real screen-reader and PDF-UA validator checks remain pending'}
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--evidence',default=None);args=parser.parse_args()
@@ -135,10 +188,13 @@ def main():
         text='\n'.join(page_texts)
         normalized=lambda s:re.sub(r'\s+',' ',s).strip()
         # Every canonical block must survive PDF text extraction, not only keywords.
+        offset=0;normalized_text=normalized(text)
         for block in blocks:
-            assert normalized(block['text']) in normalized(text), f'PDF omitted or altered block: {block["text"][:80]}'
+            block_text=normalized(block['text']);position=normalized_text.find(block_text,offset)
+            assert position>=0, f'PDF omitted, altered or reordered block: {block["text"][:80]}'
+            offset=position+len(block_text)
         assert variables['SCENARIO_POVERTY'] in text and '14.511' in text and '18.954' not in text
-        receipt['reports'].append({'name':stem,'pages':len(reader.pages),'blocks':len(blocks),'pdf_sha256':hashlib.sha256(pdf.read_bytes()).hexdigest(),'json_sha256':hashlib.sha256((OUTPUT/f'{stem}.json').read_bytes()).hexdigest(),'all_blocks_pdf_text_match':True,'json_markdown_same_source':True,'visual_review':'requires separate rendered-page inspection'})
+        receipt['reports'].append({'name':stem,'pages':len(reader.pages),'blocks':len(blocks),'pdf_sha256':hashlib.sha256(pdf.read_bytes()).hexdigest(),'json_sha256':hashlib.sha256((OUTPUT/f'{stem}.json').read_bytes()).hexdigest(),'all_blocks_pdf_text_match':True,'all_blocks_extracted_in_canonical_order':True,'json_markdown_same_source':True,'accessibility_checks':accessibility_checks(reader,title,blocks),'visual_review':'requires separate rendered-page inspection'})
         if args.evidence:
             evidence=Path(args.evidence);evidence.mkdir(parents=True,exist_ok=True);(evidence/f'{stem}-extracted.txt').write_text(text,encoding='utf-8')
     # Independent geographically disjoint population reconciliation, without WDI scaling.

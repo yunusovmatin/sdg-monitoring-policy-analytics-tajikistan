@@ -161,7 +161,7 @@ export default function Dashboard() {
                   onClick={() => setSelectedCountries(["TJK"])}
                   className="px-3 py-1 rounded-full text-sm font-medium text-gray-600 hover:bg-gray-100 transition-colors"
                 >
-                  Clear
+                  Tajikistan Only
                 </button>
               </div>
             </div>

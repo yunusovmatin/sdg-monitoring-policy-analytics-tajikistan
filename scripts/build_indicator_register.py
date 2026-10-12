@@ -32,7 +32,7 @@ def main():
     manifest = json.loads((RELEASE / 'manifest.json').read_text(encoding='utf-8'))
     receipts = {entry['path']: entry for entry in manifest['requests']}
     quality = json.loads((RELEASE / 'quality.json').read_text(encoding='utf-8'))
-    legacy = read_csv(ROOT / 'client/public/data/processed/sdg_tjk_tidy.csv')
+    legacy = read_csv(ROOT / 'data/legacy/v1.0.0/processed/sdg_tjk_tidy.csv')
     licenses = json.loads((RELEASE / 'license-evidence.json').read_text(encoding='utf-8'))
     rows, ui = [], {}
     for code in INDICATORS:

@@ -1,5 +1,7 @@
 # Production readiness — v2.0.0-rc.1
 
+Historical rc.1 assessment. Superseded for the corrected candidate by `V2_FINAL_CORRECTIONS.md`, `V2_RELEASE_READINESS.md` and their execution receipts. Counts and performance figures below describe rc.1 only.
+
 11 October 2026. Internal verdict: **PASS WITH LIMITATIONS for review; HOLD production promotion**.
 
 This independent portfolio prototype by Matin Yunusov has no UNDP affiliation. The frozen v1.0.0 production release is preserved. The upgrade branch is a review candidate and does not authorize replacement of production or institutional use.

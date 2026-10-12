@@ -17,8 +17,8 @@ from datetime import datetime, timezone
 from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
-BASELINE = ROOT / 'client/public/data/processed/sdg_tjk_tidy.csv'
-DICTIONARY = ROOT / 'client/public/data/processed/data_dictionary.csv'
+BASELINE = ROOT / 'data/legacy/v1.0.0/processed/sdg_tjk_tidy.csv'
+DICTIONARY = ROOT / 'data/legacy/v1.0.0/processed/data_dictionary.csv'
 COUNTRIES = ('ARM', 'GEO', 'KAZ', 'KGZ', 'TJK', 'UZB')
 def read_csv(path):
     with path.open(encoding='utf-8-sig', newline='') as handle:

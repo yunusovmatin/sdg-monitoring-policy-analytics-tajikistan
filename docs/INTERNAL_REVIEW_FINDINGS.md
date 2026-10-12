@@ -30,3 +30,11 @@ Resolution inspected in source: UI observation details and tabular values now pr
 ## Outstanding gates and limits
 
 The candidate may be reviewed in protected staging; it is not approved for production promotion. Exact original poverty extraction vintage remains unresolved despite the numeric match with current observations. The registry captures WDI metadata and raw footnotes; it does not provide a completed national-methodology certification for every country and year. Regional poverty/youth rates remain unavailable for accepted analytical use. Empirical scenario calibration is absent. External factual and methodological review, institutional ownership/permission, actual assistive-technology evaluation, alert delivery and hosted rollback drills remain separate requirements. Final security, browser, CI and deployment receipts must identify the committed candidate and should not be inferred from this document.
+
+## Final-corrections document review, 12 October 2026
+
+PDF navigation and metadata improvements passed generator assertions; all 29 policy and 28 methodology blocks remain in canonical extraction order. All four newly rendered pages were visually inspected with no observed clipping, overlap or missing glyphs. English language, heading bookmarks, source link annotations and footer artifact markers are now present. PDFs remain untagged and actual screen-reader/PDF-UA validation remains pending; see `PDF_ACCESSIBILITY.md` for exact scope and hashes. This is internal document review, not external certification.
+
+User-supplied independent review feedback is now recorded separately from formal expert or institutional signoff in `EXTERNAL_REVIEW_AND_SIGNOFF.md`. Independent portfolio operation does not require UNDP endorsement; official institutional status would require separate written authorization. The protected candidate still requires the user's explicit production promotion approval.
+
+The source review in `NATIONAL_POVERTY_BREAK_SOURCE_REVIEW.md` substantiates a conservative Tajikistan pre-2021 / modernized-2021+ national-poverty boundary, rather than calling the WDI footnote a 2020 survey break. The comparable-spells note is Uzbekistan's, attached to 2012 and 2013. Actual chart/test verification remains in the parent engineering receipts; no statistical values or CSV bytes were altered by this document review.

@@ -1,6 +1,10 @@
 # External review and signoff register
 
-Edition: v2 candidate, 11 October 2026. Author/maintainer: Matin Yunusov. Independent portfolio prototype. No institution has approved, commissioned or agreed to operate this platform. All external approvals below are PENDING. No institutions were contacted; requests below are prepared drafts, not sent messages. Do not name a reviewer until they consent and perform review.
+Edition: v2 candidate, updated 12 October 2026. Author/maintainer: Matin Yunusov. Independent portfolio prototype. No institution has approved, commissioned or agreed to operate this platform. All formal external approvals below are PENDING. No institutions were contacted; requests below are prepared drafts, not sent messages. Do not name a reviewer until they consent and perform review.
+
+## Review feedback received
+
+The user supplied independent review feedback through the final-corrections task. It identified historical public-data exposure, time-axis/gap presentation, protected-preview verification, and untagged PDF limitations, while acknowledging earlier candidate build/data/report evidence. That feedback is a real review input and informed the current corrections. Reviewer identity, professional qualifications, independence/conflicts and formal signed scope were not supplied or independently verified. It must not be described as institutional approval, a qualified statistical/policy signoff, accessibility certification, or an independently rerun validation of this newly corrected commit. Internal reproducibility, document inspection and browser/testing receipts remain separate evidence.
 
 ## Review package
 
@@ -15,7 +19,7 @@ Supply exact candidate commit and branch, preserved v1.0.0 baseline, data releas
 | Policy and programme interpretation | PENDING | Independent subject-matter analyst checks every claim, hypotheses versus causality, proposed research design and scenario limitations. |
 | Accessibility | PENDING | Qualified reviewer checks stated WCAG 2.2 AA scope with keyboard and actual assistive technologies; report PDFs require a separate accessibility check. |
 | Security and engineering | PENDING | Independent engineer checks build/data contracts, trust boundaries, dependency/secret receipts, failure paths and rollback. Engineering approval is not factual or methodological approval. |
-| Institutional affiliation and operation | PENDING | Written agreement from the actual institution defines authorship, branding, service ownership, maintenance, data responsibilities and authorized public wording. |
+| Institutional affiliation and operation | PENDING; required only for an official institutional status or role | Written agreement from the actual institution defines authorship, branding, service ownership, maintenance, data responsibilities and authorized public wording. An independently operated portfolio platform does not require UNDP endorsement. |
 | Release promotion | PENDING | Matin Yunusov explicitly approves reviewed candidate commit, dataset version, preview evidence and known limitations before merging/deploying. |
 
 ## Proposed statistical review request

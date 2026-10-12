@@ -1,0 +1,61 @@
+{
+  "status": "Historical v1.0.0 data; not current v2 measurements or approved definitions",
+  "relocated_on": "2026-10-12",
+  "method": "Byte-preserving relocation outside Vite public directory; no statistical values or definitions altered",
+  "files": [
+    {
+      "original_path": "client/public/data/raw/sources.csv",
+      "archival_path": "data/legacy/v1.0.0/raw/sources.csv",
+      "bytes": 3549,
+      "sha256": "166351ff968a24e2d183cee3eea93f5ad91e6b170a30646119f0a3fec1cfc5c0"
+    },
+    {
+      "original_path": "client/public/data/raw/wdi_data_raw.csv",
+      "archival_path": "data/legacy/v1.0.0/raw/wdi_data_raw.csv",
+      "bytes": 208439,
+      "sha256": "4608f91ea57ffbeb325bd83d9c1195788ddff2593ccb17bdb1045d7a5a2f2d52"
+    },
+    {
+      "original_path": "client/public/data/raw/wdi_data_raw.parquet",
+      "archival_path": "data/legacy/v1.0.0/raw/wdi_data_raw.parquet",
+      "bytes": 20826,
+      "sha256": "9eb6a07b1462d2c8228a3c84fbd614a25bfa6f21566841e97bbba227f4abdf09"
+    },
+    {
+      "original_path": "client/public/data/processed/coverage_by_country.csv",
+      "archival_path": "data/legacy/v1.0.0/processed/coverage_by_country.csv",
+      "bytes": 1012,
+      "sha256": "cc667802fda1640de7d8556df9fb7f795e48734fccaf6f2952d5b4fd37e94ef5"
+    },
+    {
+      "original_path": "client/public/data/processed/data_dictionary.csv",
+      "archival_path": "data/legacy/v1.0.0/processed/data_dictionary.csv",
+      "bytes": 1529,
+      "sha256": "4e192dbf562e8746b717dfffc3ddb08662e524c951217ac265c5ccbeef08f9bb"
+    },
+    {
+      "original_path": "client/public/data/processed/sdg_tjk_tidy.csv",
+      "archival_path": "data/legacy/v1.0.0/processed/sdg_tjk_tidy.csv",
+      "bytes": 401589,
+      "sha256": "22161580dab28f672e23f59018cef9ea1b9a87b13b091cbde56dd4b17d00de8e"
+    },
+    {
+      "original_path": "client/public/data/processed/sdg_tjk_tidy.parquet",
+      "archival_path": "data/legacy/v1.0.0/processed/sdg_tjk_tidy.parquet",
+      "bytes": 59135,
+      "sha256": "c964dc0bb5db9af486c4fbf9202f477d2965695421688bb4a1a2ae8397b17db7"
+    },
+    {
+      "original_path": "client/public/data/processed/tajikistan_only.csv",
+      "archival_path": "data/legacy/v1.0.0/processed/tajikistan_only.csv",
+      "bytes": 59602,
+      "sha256": "49aa39b972f33464a495c4aae0e6fb9277f8feb6901cc5487108752bb723759f"
+    },
+    {
+      "original_path": "client/public/data/processed/time_coverage.csv",
+      "archival_path": "data/legacy/v1.0.0/processed/time_coverage.csv",
+      "bytes": 1009,
+      "sha256": "a38966ea14a7d44013d56ca2f48e33fa0cd37e6092cb7bc3f44934eb691f2460"
+    }
+  ]
+}

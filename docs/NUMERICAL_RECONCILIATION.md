@@ -4,7 +4,7 @@
 
 Author: Matin Yunusov. Independent analytical portfolio prototype; not commissioned, endorsed, reviewed or operated by UNDP.
 
-Audit date: 10 October 2026. Primary numerical evidence: `client/public/data/processed/sdg_tjk_tidy.csv`, bundled WDI snapshot labelled retrieved 25 January 2026. These are reconciled historical snapshot values, not claims that today's WDI release is identical. CSV SHA-256: `330c4d45bb149d0d18a023d59498d2100d8f427fb2ebe14c931e0bf77753a791`.
+Audit date: 10 October 2026. Primary numerical evidence: `data/legacy/v1.0.0/processed/sdg_tjk_tidy.csv`, bundled WDI snapshot labelled retrieved 25 January 2026. These are reconciled historical snapshot values, not claims that today's WDI release is identical. CSV SHA-256: `330c4d45bb149d0d18a023d59498d2100d8f427fb2ebe14c931e0bf77753a791`.
 
 ## Claims audit
 

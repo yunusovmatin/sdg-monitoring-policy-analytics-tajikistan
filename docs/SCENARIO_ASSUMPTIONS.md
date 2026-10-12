@@ -8,7 +8,7 @@ This explorer illustrates arithmetic conditional on hypothetical inputs. It is n
 
 ## Baselines and inputs
 
-Baseline is the latest common bundled TJK year for national poverty, youth unemployment and population, no later than 2030. In this snapshot that is 2023: SI.POV.NAHC 20.4%; SL.UEM.1524.ZS 26.836% of youth labour force ages 15–24; SP.POP.TOTL 10,389,799 persons. Source: `client/public/data/processed/sdg_tjk_tidy.csv`, WDI snapshot labelled retrieved 25 January 2026. SI.POV.LMIC is a different poverty definition and is not substituted. Live refresh does not alter these baselines. Missing common-year evidence disables scenario calculation.
+Baseline is the latest common bundled TJK year for national poverty, youth unemployment and population, no later than 2030. In this snapshot that is 2023: SI.POV.NAHC 20.4%; SL.UEM.1524.ZS 26.836% of youth labour force ages 15–24; SP.POP.TOTL 10,389,799 persons. Source: `data/legacy/v1.0.0/processed/sdg_tjk_tidy.csv`, WDI snapshot labelled retrieved 25 January 2026. SI.POV.LMIC is a different poverty definition and is not substituted. Live refresh does not alter these baselines. Missing common-year evidence disables scenario calculation.
 
 | Input or constant | Default | Interface range | Units and evidential status |
 |---|---:|---|---|

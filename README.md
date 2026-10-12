@@ -41,6 +41,8 @@ Vite config is at the repository root, the app under `client/`, and frontend out
 - [Regional source investigation](docs/REGIONAL_SOURCE_INVESTIGATION.md)
 - [Operations](docs/OPERATIONS_RUNBOOK.md), [security](docs/SECURITY_ASSESSMENT.md), [accessibility](docs/ACCESSIBILITY_ASSESSMENT.md)
 - [External review and signoff](docs/EXTERNAL_REVIEW_AND_SIGNOFF.md)
-- [Production-readiness assessment](docs/PRODUCTION_READINESS_REPORT.md)
+- [Final corrections](docs/V2_FINAL_CORRECTIONS.md), [public data audit](docs/DATA_PUBLICATION_AUDIT.md) and [time-series integrity](docs/TIME_SERIES_INTEGRITY.md)
+- [Corrected-candidate release readiness](docs/V2_RELEASE_READINESS.md) and [hosted verification status](docs/HOSTED_VERIFICATION.md)
+- [PDF accessibility scope](docs/PDF_ACCESSIBILITY.md)
 
 Historical v1 reports are retained as archival records, not current evidence. Private configuration, local review archives, generated dependencies and test artifacts are excluded from publication.

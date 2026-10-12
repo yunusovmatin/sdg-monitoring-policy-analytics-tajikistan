@@ -7,3 +7,7 @@ docs/reference export-ignore
 data/releases/** -text
 client/public/data/releases/** -text
 *.pdf -text
+*.pdf binary
+
+# Relocated historical evidence keeps its exact original working bytes.
+data/legacy/v1.0.0/** -text
