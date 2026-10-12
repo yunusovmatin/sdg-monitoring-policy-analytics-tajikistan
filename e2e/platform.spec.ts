@@ -1,8 +1,12 @@
 import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { parseCsv } from "../client/src/lib/csv";
+function chartEvidenceFile(name:string){
+ mkdirSync("test-results/chart-evidence",{recursive:true});
+ return `test-results/chart-evidence/${name}`;
+}
 async function loadSection(page:import("@playwright/test").Page,name:string){
  const button=page.getByRole("button",{name:`Load ${name}`,exact:true});
  const title={"Comparison Tool":"Interactive Comparison Tool","Scenario Explorer":"Illustrative Scenario Explorer","Trend and Peer Charts":"Trend Analysis"}[name]!;
@@ -135,7 +139,7 @@ async function assertUzbekistanCalendarSpacing(chart:import("@playwright/test").
  expect((xs[3]-xs[2])/(xs[2]-xs[1])).toBeCloseTo(18,1);
  const paths=await chart.locator("path.recharts-line-curve"+(color?`[stroke="${color}"]`:"")).evaluateAll(nodes=>nodes.map(n=>n.getAttribute("d")||""));
  expect(paths).toHaveLength(3);
- writeFileSync(`../evidence/final-corrections-svg-${color?"comparison":"dashboard"}.json`,JSON.stringify({observedYears:[2000,2002,2003,2021,2022,2023,2024,2025],dotCount:xs.length,pathCount:paths.length,cx:xs,gapToSingleYearRatio:(xs[3]-xs[2])/(xs[2]-xs[1]),paths},null,2));
+ writeFileSync(chartEvidenceFile(`final-corrections-svg-${color?"comparison":"dashboard"}.json`),JSON.stringify({observedYears:[2000,2002,2003,2021,2022,2023,2024,2025],dotCount:xs.length,pathCount:paths.length,cx:xs,gapToSingleYearRatio:(xs[3]-xs[2])/(xs[2]-xs[1]),paths},null,2));
  for(const d of paths){const xy=d.match(/-?\d+(?:\.\d+)?(?:e[+-]?\d+)?/gi)!.map(Number);const px=xy.filter((_,i)=>i%2===0);expect(Math.max(...px)-Math.min(...px)).toBeLessThan(xs[3]-xs[2]);}
 }
 test("actual Uzbekistan Gini has calendar spacing and disconnected long gaps in both charts; Tajikistan poverty source points remain unchanged",async({page})=>{
@@ -143,16 +147,16 @@ test("actual Uzbekistan Gini has calendar spacing and disconnected long gaps in 
  const select=page.getByRole("combobox",{name:"Select Indicator",exact:true});await select.click();await page.getByRole("option",{name:/Gini index/}).click();
  await loadSection(page,"Trend and Peer Charts");const dashboard=page.getByTestId("dashboard-time-series");
  await assertUzbekistanCalendarSpacing(dashboard);await expect(dashboard).toContainText("2004–2020");await expect(dashboard).toContainText("consumption to income");
- await dashboard.screenshot({path:"../evidence/final-corrections-uzb-gini-dashboard.png"});
+ await dashboard.screenshot({path:chartEvidenceFile("final-corrections-uzb-gini-dashboard.png")});
  const [download]=await Promise.all([page.waitForEvent("download"),page.getByRole("button",{name:"Export Selected Data",exact:true}).click()]);
  const exported=parseCsv(readFileSync((await download.path())!,"utf8")).slice(1);const raw=data.filter(d=>d.country_code==="UZB"&&d.indicator_code==="SI.POV.GINI");
  expect(exported).toHaveLength(8);for(const row of exported){const source=raw.find(d=>d.year===row[4])!;expect(source).toBeDefined();expect(Number(row[5])).toBe(Number(source.value));expect(row[14]).toBe(source.footnote)}
  await loadSection(page,"Comparison Tool");await page.getByRole("combobox",{name:"Comparison Country A",exact:true}).click();await page.getByRole("option",{name:"Uzbekistan",exact:true}).click();
  await page.getByRole("combobox",{name:"Comparison Indicator",exact:true}).click();await page.getByRole("option",{name:/Gini index/}).click();
- const comparison=page.getByTestId("comparison-time-series");await assertUzbekistanCalendarSpacing(comparison,"#2563eb");await comparison.screenshot({path:"../evidence/final-corrections-uzb-gini-comparison.png"});
+ const comparison=page.getByTestId("comparison-time-series");await assertUzbekistanCalendarSpacing(comparison,"#2563eb");await comparison.screenshot({path:chartEvidenceFile("final-corrections-uzb-gini-comparison.png")});
  await page.getByRole("button",{name:"Tajikistan Only",exact:true}).click();await select.click();await page.getByRole("option",{name:/Poverty headcount ratio at national poverty lines/}).click();
  await expect(dashboard.locator("circle.recharts-dot")).toHaveCount(4);await expect(dashboard.locator("path.recharts-line-curve")).toHaveCount(1);
- await dashboard.screenshot({path:"../evidence/final-corrections-tjk-poverty-dashboard.png"});
+ await dashboard.screenshot({path:chartEvidenceFile("final-corrections-tjk-poverty-dashboard.png")});
  const [povertyDownload]=await Promise.all([page.waitForEvent("download"),page.getByRole("button",{name:"Export Selected Data",exact:true}).click()]);
  const poverty=parseCsv(readFileSync((await povertyDownload.path())!,"utf8")).slice(1);expect(poverty.map(r=>r[4])).toEqual(["2021","2022","2023","2024"]);expect(poverty.map(r=>Number(r[5]))).toEqual([25.6,21.7,20.4,19.8]);
 });

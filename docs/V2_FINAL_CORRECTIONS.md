@@ -23,3 +23,8 @@ Protected hosted verification is separately documented in `HOSTED_VERIFICATION.m
 Corrected candidate2.0.0-rc.2:36 application tests,25 data-pipeline tests and15 browser tests passed, including the required three route widths, actual SVG calendar-distance/segmentation, exports and exact PDF downloads. Frozen installation, TypeScript, production build/public-asset assertion, dependency audit and scoped secret scan passed. Browser completion:39.4seconds. Audit advisories:zero; current-file heuristic secret findings:zero. Dataset SHA256 remains2491a8a141078d7ed62ce6306236837127f2c531d6066f5a81596e137aa2c5ae.
 
 Additional UI clarity correction:the previous Clear button actually retained Tajikistan; its label now reads Tajikistan Only, preserving the existing selection behavior.
+
+
+## Fresh-runner CI correction
+
+The first corrected-source GitHub Actions run38265810062 passed installation, data/report checks, audit, TypeScript/build and14 of15 browser tests. The remaining test failed while writing chart evidence to a local-only sibling directory, after its SVG assertions had passed. Evidence output now creates an ignored test-results/chart-evidence directory itself. The full local browser suite passed again15/15 in37.7seconds from a clean Playwright output directory. The final hosted run must pass on the amended exact commit; the initial failure is retained in private evidence. No chart assertion or acceptance threshold was relaxed.
