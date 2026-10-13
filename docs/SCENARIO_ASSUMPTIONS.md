@@ -1,12 +1,14 @@
 # Scenario assumptions — Project 1
 
+> Historical v1 arithmetic and assumptions, preserved for audit. Original extraction provenance is unresolved and current unemployment estimates materially differ. Frozen v1 remains unchanged. The v2 review calculator uses only the separately captured wdi-2026-10-11-candidate: latest common baseline 2024, national poverty 19.8%, youth unemployment 14.556%, population 10,590,927 persons, six cohorts to 2030. At unchanged default inputs, illustrative ranges are 18.6-19.1% poverty and 13.4-13.9% youth unemployment; annual direct investment USD 5 million and cumulative USD 30 million. The canonical candidate methodology reproduces these updated calculations. Candidate promotion and external approval remain PENDING; every programme coefficient remains hypothetical. Old results below are explicitly archival and are not blended with current observations.
+
 Author: Matin Yunusov. Independent analytical portfolio prototype; not commissioned, endorsed, reviewed or operated by UNDP. Audit date: 10 October 2026.
 
 This explorer illustrates arithmetic conditional on hypothetical inputs. It is not an estimated policy effect, economic forecast, programme costing, confidence interval or attributable-impact model. Historical observations and hypothetical 2030 rates are visually and verbally distinguished.
 
 ## Baselines and inputs
 
-Baseline is the latest common bundled TJK year for national poverty, youth unemployment and population, no later than 2030. In this snapshot that is 2023: SI.POV.NAHC 20.4%; SL.UEM.1524.ZS 26.836% of youth labour force ages 15–24; SP.POP.TOTL 10,389,799 persons. Source: `client/public/data/processed/sdg_tjk_tidy.csv`, WDI snapshot labelled retrieved 25 January 2026. SI.POV.LMIC is a different poverty definition and is not substituted. Live refresh does not alter these baselines. Missing common-year evidence disables scenario calculation.
+Baseline is the latest common bundled TJK year for national poverty, youth unemployment and population, no later than 2030. In this snapshot that is 2023: SI.POV.NAHC 20.4%; SL.UEM.1524.ZS 26.836% of youth labour force ages 15–24; SP.POP.TOTL 10,389,799 persons. Source: `data/legacy/v1.0.0/processed/sdg_tjk_tidy.csv`, WDI snapshot labelled retrieved 25 January 2026. SI.POV.LMIC is a different poverty definition and is not substituted. Live refresh does not alter these baselines. Missing common-year evidence disables scenario calculation.
 
 | Input or constant | Default | Interface range | Units and evidential status |
 |---|---:|---|---|

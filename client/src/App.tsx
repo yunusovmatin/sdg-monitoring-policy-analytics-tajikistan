@@ -4,10 +4,11 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import Home from "./pages/Home";
-import Dashboard from "./pages/Dashboard";
-import PolicyBrief from "./pages/PolicyBrief";
-import Methodology from "./pages/Methodology";
+import { lazy, Suspense, useEffect, useRef } from "react";
+const Home=lazy(()=>import("./pages/Home"));
+const Dashboard=lazy(()=>import("./pages/Dashboard"));
+const PolicyBrief=lazy(()=>import("./pages/PolicyBrief"));
+const Methodology=lazy(()=>import("./pages/Methodology"));
 
 import { Link, useLocation } from "wouter";
 
@@ -31,13 +32,13 @@ function Navigation() {
             </Link>
           </div>
           <div className="flex flex-wrap gap-4 sm:ml-6 sm:gap-8 pb-3 sm:pb-0">
-            <Link href="/dashboard" className={`${isActive('/dashboard') ? 'border-blue-500 text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'} inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium cursor-pointer`}>
+            <Link href="/dashboard" aria-current={isActive("/dashboard") ? "page" : undefined} className={`${isActive('/dashboard') ? 'border-blue-500 text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'} inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium cursor-pointer`}>
               Dashboard
             </Link>
-            <Link href="/policy-brief" className={`${isActive('/policy-brief') ? 'border-blue-500 text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'} inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium cursor-pointer`}>
+            <Link href="/policy-brief" aria-current={isActive("/policy-brief") ? "page" : undefined} className={`${isActive('/policy-brief') ? 'border-blue-500 text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'} inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium cursor-pointer`}>
               Policy Brief
             </Link>
-            <Link href="/methodology" className={`${isActive('/methodology') ? 'border-blue-500 text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'} inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium cursor-pointer`}>
+            <Link href="/methodology" aria-current={isActive("/methodology") ? "page" : undefined} className={`${isActive('/methodology') ? 'border-blue-500 text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'} inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium cursor-pointer`}>
               Methodology
             </Link>
           </div>
@@ -57,10 +58,10 @@ function Footer() {
               Independent analytical prototype by Matin Yunusov. Not affiliated with, commissioned by, endorsed by, officially reviewed by, or operated by UNDP.
             </p>
             <p className="text-xs text-gray-500 mt-1">
-              Bundled WDI snapshot: retrieved 25 January 2026; observations end in 2023 or earlier. Live refresh is separate. Not a forecast.
+              Review snapshot wdi-2026-10-11-candidate: captured 11 October 2026; observation years vary. Historical v1.0.0 remains separate. Not a forecast.
             </p>
             <p className="text-xs text-gray-500 mt-1">
-              Designed as a lightweight analytical prototype rather than a production monitoring system.
+              v2 review candidate. External statistical, accessibility and institutional signoff pending.
             </p>
             <p className="text-xs text-gray-500 mt-2">
               Tools used: Data processing and visualization supported by Manus.
@@ -74,10 +75,15 @@ function Footer() {
 }
 
 function Router() {
+  const [location]=useLocation();
+  const previous=useRef(location);
+  useEffect(()=>{if(previous.current!==location){document.getElementById("main-content")?.focus();previous.current=location;} document.title=`${location === "/" ? "Home" : location.slice(1)} | Tajikistan SDG Analytics`; },[location]);
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
+      <a href="#main-content" className="skip-link">Skip to main content</a>
       <Navigation />
-      <main className="flex-grow">
+      <main id="main-content" tabIndex={-1} className="flex-grow">
+        <Suspense fallback={<p role="status" className="container py-12">Loading page…</p>}>
         <Switch>
           <Route path={"/"} component={Home} />
           <Route path={"/dashboard"} component={Dashboard} />
@@ -87,6 +93,7 @@ function Router() {
           {/* Final fallback route */}
           <Route component={NotFound} />
         </Switch>
+        </Suspense>
       </main>
       <Footer />
     </div>

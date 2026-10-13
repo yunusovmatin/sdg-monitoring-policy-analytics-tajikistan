@@ -1,0 +1,17 @@
+import { readFileSync, readdirSync, statSync } from "node:fs";
+import { gzipSync } from "node:zlib";
+import assert from "node:assert/strict";
+import { assertPublicDataTree } from "./publication-contract.mjs";
+const publicDataSource=assertPublicDataTree("client/public/data");
+const publicDataBuild=assertPublicDataTree("dist/public/data");
+assert.deepEqual(publicDataBuild,publicDataSource);
+const config=JSON.parse(readFileSync("vercel.json","utf8"));
+assert.equal(config.outputDirectory,"dist/public");
+for(const route of ["/dashboard","/policy-brief","/methodology"])assert(config.rewrites.some(r=>r.source===route&&r.destination==="/index.html"));
+const html=readFileSync("dist/public/index.html","utf8");
+assert(!/__manus__|umami|forge\.butterfly/.test(html));
+assert(!readdirSync("dist/public").some(name=>/\.env|reference|verification|Local Files/.test(name)));
+const js=readdirSync("dist/public/assets").filter(name=>name.endsWith(".js"));
+const sizes=js.map(name=>({name,bytes:statSync("dist/public/assets/"+name).size,gzipBytes:gzipSync(readFileSync("dist/public/assets/"+name)).length}));
+for(const size of sizes)assert(size.gzipBytes<=350_000,`Compressed JS chunk exceeds 350 kB budget: ${size.name}`);
+console.log(JSON.stringify({routingConfig:"passed",publicDataAllowlist:publicDataBuild,legacyPublicAssets:"excluded",developmentTooling:"absent from HTML",compressedChunkBudget:350_000,assets:sizes},null,2));

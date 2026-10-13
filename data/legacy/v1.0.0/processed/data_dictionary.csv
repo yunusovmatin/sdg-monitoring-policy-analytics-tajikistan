@@ -1,0 +1,18 @@
+indicator_code,indicator_name,sdg_category,unit
+BX.TRF.PWKR.DT.GD.ZS,"Personal remittances, received (% of GDP)",Context: Remittances,% of GDP
+EG.FEC.RNEW.ZS,Renewable energy consumption (% of total),SDG 13: Climate Action,% of total
+FP.CPI.TOTL.ZG,"Inflation, consumer prices (annual %)",Context: Economy,% annual change
+NY.GDP.MKTP.KD.ZG,GDP growth (annual %),SDG 8: Decent Work,% annual change
+NY.GDP.PCAP.KD,GDP per capita (constant 2015 US$),SDG 8: Decent Work,constant 2015 US$
+SE.SEC.ENRR,"School enrollment, secondary (% gross)",Context: Education,% gross enrollment
+SI.DST.FRST.20,Income share held by lowest 20%,SDG 10: Reduced Inequalities,% of income
+SI.POV.DDAY,Poverty headcount ratio at $2.15/day (2017 PPP),SDG 1: No Poverty,% of population
+SI.POV.GINI,GINI index,SDG 10: Reduced Inequalities,index (0-100)
+SI.POV.LMIC,Poverty headcount ratio at $3.65/day (2017 PPP),SDG 1: No Poverty,% of population
+SI.POV.NAHC,Poverty headcount ratio at national poverty lines,SDG 1: No Poverty,% of population
+SL.TLF.CACT.ZS,"Labor force participation rate, total (% ages 15+)",SDG 8: Decent Work,% of population 15+
+SL.UEM.1524.ZS,"Unemployment, youth (% of labor force ages 15-24)",SDG 8: Decent Work,% of labor force
+SL.UEM.TOTL.ZS,"Unemployment, total (% of labor force)",SDG 8: Decent Work,% of labor force
+SM.POP.NETM,Net migration,Context: Migration,persons
+SP.POP.TOTL,"Population, total",Context: Demographics,persons
+SP.URB.TOTL.IN.ZS,Urban population (% of total),Context: Demographics,% of total

@@ -15,6 +15,9 @@ export type Baseline=NonNullable<ReturnType<typeof getScenarioBaseline>>;
 const clamp=(n:number)=>Math.max(0,Math.min(100,n));
 export function calculateScenario(baseline: Baseline, input: ScenarioInputs) {
   if (Object.values(input).some(v=>!Number.isFinite(v)) || input.households<0 || input.investmentPerHousehold<0 || input.outcomeRate<0 || input.outcomeRate>100 || input.inflation<=-100 || input.gdpGrowth<=-100) throw new Error("Invalid scenario inputs");
+  if (!Number.isInteger(baseline.year) || baseline.year < 1900 || baseline.year > ASSUMPTIONS.targetYear || !Number.isFinite(baseline.population.value) || baseline.population.value <= 0 || [baseline.poverty.value, baseline.youth.value].some(value=>!Number.isFinite(value) || value < 0 || value > 100)) throw new Error("Invalid scenario baseline");
+  // Bound calculator arithmetic, independently of the smaller UI slider ranges.
+  if (input.households > 1e12 || input.investmentPerHousehold > 1e12 || input.gdpGrowth > 1000 || input.inflation > 1000 || input.inflation < -99) throw new Error("Scenario inputs exceed numerical limits");
   const years=ASSUMPTIONS.targetYear-baseline.year;
   const reachedHouseholds=input.households*years;
   const peopleReached=reachedHouseholds*ASSUMPTIONS.householdSize;
@@ -34,10 +37,11 @@ export function calculateScenario(baseline: Baseline, input: ScenarioInputs) {
 }
 export function scenarioCsv(baseline: Baseline,input:ScenarioInputs) {
   const s=calculateScenario(baseline,input);
+  const source=baseline.poverty.vintage?.startsWith("wdi-") ? "Captured WDI review candidate" : "Bundled WDI snapshot";
   return toCsv([["Metric","Code","Source","Baseline year","Baseline (%)","Hypothetical lower rate (%) in 2030","Hypothetical upper rate (%) in 2030","Discussion benchmark (%, not a target)"],
-    ["National poverty",baseline.poverty.indicator_code,"Bundled WDI snapshot",baseline.year,baseline.poverty.value.toFixed(1),s.povertyRange[0].toFixed(1),s.povertyRange[1].toFixed(1),12],
-    ["Youth unemployment",baseline.youth.indicator_code,"Bundled WDI snapshot",baseline.year,baseline.youth.value.toFixed(1),s.youthRange[0].toFixed(1),s.youthRange[1].toFixed(1),10],
-    [],["Author","Matin Yunusov"],["Status","Independent analytical prototype; not commissioned, endorsed, reviewed or operated by UNDP"],
+    ["National poverty",baseline.poverty.indicator_code,source,baseline.year,baseline.poverty.value.toFixed(1),s.povertyRange[0].toFixed(1),s.povertyRange[1].toFixed(1),12],
+    ["Youth unemployment",baseline.youth.indicator_code,source,baseline.year,baseline.youth.value.toFixed(1),s.youthRange[0].toFixed(1),s.youthRange[1].toFixed(1),10],
+    [],["Data vintage",baseline.poverty.vintage ?? "Unresolved historical extraction"],["Source URL",baseline.poverty.source_url ?? "https://data.worldbank.org/indicator/SI.POV.NAHC"],["Captured at",baseline.poverty.retrieved_at],["Baseline poverty source footnote",baseline.poverty.footnote],["Baseline youth source footnote",baseline.youth.footnote],["Baseline population source footnote",baseline.population.footnote],["Source observation status caveat","Blank source status does not prove an observation is final or comparably measured"],["Author","Matin Yunusov"],["Status","Independent analytical prototype; not commissioned, endorsed, reviewed or operated by UNDP"],
     ["Disclaimer","Hypothetical arithmetic; indicative only; not attributable impacts or forecasts"],
     ["Sensitivity","+/-30% of assumed change from baseline, not rate level; not a confidence interval; rates bounded to 0-100%"],
     ["Baseline youth unrounded",baseline.youth.value],["Baseline population",baseline.population.value],["Population code",baseline.population.indicator_code],

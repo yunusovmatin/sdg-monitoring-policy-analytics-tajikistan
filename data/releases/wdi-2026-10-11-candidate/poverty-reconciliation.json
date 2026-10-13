@@ -1,0 +1,61 @@
+{
+  "evidence": [
+    {
+      "comparable_spell": "2021 - 2024",
+      "headcount_percent": 2.64,
+      "original_2026_01_25_vintage_proved": false,
+      "raw_path": "raw/pip-TJK-2023-2017-2.15.json",
+      "requested_poverty_line": 2.15,
+      "requested_ppp_version": 2017,
+      "retrieved_at": "2026-10-11T17:57:16.032850+00:00",
+      "sha256": "a453883fecd4254a097183ff8089b528b7a0517614c8a4c3911167d7ccd8c920",
+      "survey": "HBS",
+      "survey_comparability": 2,
+      "url": "https://api.worldbank.org/pip/v1/pip?country=TJK&year=2023&povline=2.15&ppp_version=2017&fill_gaps=false",
+      "welfare_type": "consumption"
+    },
+    {
+      "comparable_spell": "2021 - 2024",
+      "headcount_percent": 14.860000000000001,
+      "original_2026_01_25_vintage_proved": false,
+      "raw_path": "raw/pip-TJK-2023-2017-3.65.json",
+      "requested_poverty_line": 3.65,
+      "requested_ppp_version": 2017,
+      "retrieved_at": "2026-10-11T17:57:16.221634+00:00",
+      "sha256": "0d9002eed5556230f204de45ec3239a930fcf1902aeae683d8785f95f9764200",
+      "survey": "HBS",
+      "survey_comparability": 2,
+      "url": "https://api.worldbank.org/pip/v1/pip?country=TJK&year=2023&povline=3.65&ppp_version=2017&fill_gaps=false",
+      "welfare_type": "consumption"
+    },
+    {
+      "comparable_spell": "2021 - 2024",
+      "headcount_percent": 7.290000000000001,
+      "original_2026_01_25_vintage_proved": false,
+      "raw_path": "raw/pip-TJK-2023-2021-3.0.json",
+      "requested_poverty_line": 3.0,
+      "requested_ppp_version": 2021,
+      "retrieved_at": "2026-10-11T17:57:16.993023+00:00",
+      "sha256": "f9ecefad8dc7837870a8fcff0fdea32f2ffb42869f2cc0fea2369e97b2579a56",
+      "survey": "HBS",
+      "survey_comparability": 2,
+      "url": "https://api.worldbank.org/pip/v1/pip?country=TJK&year=2023&povline=3.0&ppp_version=2021&fill_gaps=false",
+      "welfare_type": "consumption"
+    },
+    {
+      "comparable_spell": "2021 - 2024",
+      "headcount_percent": 18.14,
+      "original_2026_01_25_vintage_proved": false,
+      "raw_path": "raw/pip-TJK-2023-2021-4.2.json",
+      "requested_poverty_line": 4.2,
+      "requested_ppp_version": 2021,
+      "retrieved_at": "2026-10-11T17:57:17.683104+00:00",
+      "sha256": "51551ddbad8c7b68246fbc41f9d0a08c9ec0677cd7e1aa913f97e33d354c3d69",
+      "survey": "HBS",
+      "survey_comparability": 2,
+      "url": "https://api.worldbank.org/pip/v1/pip?country=TJK&year=2023&povline=4.2&ppp_version=2021&fill_gaps=false",
+      "welfare_type": "consumption"
+    }
+  ],
+  "status": "Current PIP responses only; do not authenticate missing original extraction"
+}

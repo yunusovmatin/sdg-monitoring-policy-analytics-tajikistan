@@ -38,10 +38,10 @@ export default function ScenarioPlanner({ data }: { data: DataPoint[] }) {
       <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 mb-6">
         <div>
           <div className="flex flex-wrap items-center gap-2 mb-2">
-            <h3 className="text-lg font-bold text-gray-900">Illustrative Scenario Explorer</h3>
-            <span className="text-xs font-bold text-red-600 bg-red-50 px-2 py-1 rounded">INDICATIVE ONLY</span>
+            <h2 className="text-lg font-bold text-gray-900">Illustrative Scenario Explorer</h2>
+            <span className="text-xs font-bold text-red-700 bg-red-50 px-2 py-1 rounded">INDICATIVE ONLY</span>
           </div>
-          <p className="text-sm text-gray-500">Hypothetical reach arithmetic using bundled WDI baselines. Illustrative trajectories, not attributable impacts or forecasts. The ranges are not economically validated bounds.</p>
+          <p className="text-sm text-gray-500">Hypothetical reach arithmetic using captured candidate WDI baselines. Illustrative trajectories, not attributable impacts or forecasts. The ranges are not economically validated bounds.</p>
         </div>
         <div className="flex gap-2">
           <Button variant="outline" size="sm" onClick={handleExport}>
@@ -163,7 +163,7 @@ export default function ScenarioPlanner({ data }: { data: DataPoint[] }) {
 
         {/* Visualization Panel */}
         <div className="lg:col-span-2 space-y-6">
-          <p className="text-sm text-gray-700" data-testid="scenario-baselines">Bundled WDI baselines ({baseline.year}): national poverty {baseline.poverty.value.toFixed(1)}% of population ({baseline.poverty.indicator_code}); youth unemployment {baseline.youth.value.toFixed(1)}% of youth labor force ages 15-24 ({baseline.youth.indicator_code}); population {baseline.population.value.toLocaleString()} ({baseline.population.indicator_code}). Separate from live refresh.</p>
+          <p className="text-sm text-gray-700" data-testid="scenario-baselines">Captured candidate WDI baselines ({baseline.year}): national poverty {baseline.poverty.value.toFixed(1)}% of population ({baseline.poverty.indicator_code}); youth unemployment {baseline.youth.value.toFixed(1)}% of youth labor force ages 15-24 ({baseline.youth.indicator_code}); population {baseline.population.value.toLocaleString()} ({baseline.population.indicator_code}). Pinned to wdi-2026-10-11-candidate; no live refresh.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="p-4 bg-gray-50 rounded-lg border border-gray-200 shadow-sm">
               <div className="text-sm text-gray-500 mb-1 font-semibold">Hypothetical National Poverty (2030)</div>

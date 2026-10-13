@@ -19,6 +19,7 @@ export const fetchIndicatorData = async (
   startYear: number = 2000,
   endYear: number = new Date().getUTCFullYear()
 ): Promise<WBIndicatorData[]> => {
+  if (!/^[A-Z]{3}$/.test(countryCode) || !/^[A-Z0-9._]+$/.test(indicatorCode) || !Number.isInteger(startYear) || !Number.isInteger(endYear) || startYear < 1900 || endYear > 2100 || startYear > endYear) throw new Error("Invalid World Bank request parameters");
   try {
     // Format: /country/{countryCode}/indicator/{indicatorCode}?format=json&date={startYear}:{endYear}&per_page=1000
     const url = `${BASE_URL}/country/${countryCode}/indicator/${indicatorCode}?format=json&date=${startYear}:${endYear}&per_page=1000`;

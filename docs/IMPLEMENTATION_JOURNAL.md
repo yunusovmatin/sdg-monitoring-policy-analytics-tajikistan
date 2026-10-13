@@ -1,0 +1,24 @@
+# v2 implementation journal
+
+2026-10-11: Read governing specification and explicit pasted request completely. Verified local baseline tag/main and public deployment metadata. Created isolated checkout and branch `upgrade/production-quality-v2`. Production remains baseline. User explicitly authorized independent delegation; assigned statistical/ETL, engineering and regional/canonical-report reviews. No paid services or institutional contact.
+
+Phase 0: inventoried 127 tracked files; created baseline report separating actual findings and incomplete assessments. Phase 1 primary sources confirm June 2025 poverty definition transition and renewable SDG 7.2.1 classification. Historical poverty values remain unresolved; preserve baseline bytes and restrict analytical authority.
+
+Phase 1-2: captured all 17 current WDI definitions, 34 raw metadata/data responses, four explicit-PPP PIP comparisons and page license checks. Candidate wdi-2026-10-11-candidate has 2,315 observations, 405 overlapping value revisions, 27 removed legacy keys and 182 new observations. Exact candidate SHA2491a8a141078d7ed62ce6306236837127f2c531d6066f5a81596e137aa2c5ae. Historical poverty numbers match current 2021PPP but original extraction remains unauthenticated. Rebuilt new offline deterministic ETL; 25 contract tests passed. No dataset production promotion.
+
+Phase 3: removed unverified rates and their module from analytical display; original JSON/figures retained outside public output. Verified five official regional population components separately, without replacing national WDI or fabricating regional rates.
+
+Phase 4: newly authored canonical templates generate resolved Markdown/JSON/PDF from candidate data. Both PDFs two pages; all29/28 report blocks match extracted text; allfour pages visually checked. Candidate 2024 common baseline yields six cohorts; default hypothetical ranges18.6-19.1% and13.4-13.9%. Internal substantive reviewer matched2,315rows to raw evidence and found national-threshold comparability problem, corrected. Follow-up found514source footnotes; preserved in UI/exports with welfare/census breaks. NHC/Gini/bottom20 cross-country gaps/ranks suppressed; asynchronous rankings suppressed.
+
+Phase 5: dependency vulnerabilities remediated, legacy tooling/analytics removed, no external fonts, scoped CSP and CI added. Snapshot checksum verified before parsing, explicit retry and no zero fabrication. Expanded unit/data/browser tests. Cold throttled dashboard initially missed4s LCP; route/lazy chart loading reduced measuredLCP to3.140s in an intermediate passing run. Manual narrow-screen keyboard check found lost focus on deferred calculator activation; fixed stable region focus and added keyboard-accessible table scrolling. Final integration receipt supersedes earlier runs. Actual local restoration of v1 CSV/scenario/config succeeded after documented Windows CRLF-to-Git-LF normalization; hosted rollback not performed.
+
+Phase 6: external review/signoff checklist prepared. Statistical, policy, real assistive-technology, security and institutional review remain pending. No institution contacted, paid resources enabled, main merged, production deployed or v1 tag moved.
+
+
+## Final corrections — 12 October 2026
+
+A clean checkpoint preserves reviewed rc.1 commit 1d3916d0746097e8d6f91374dd5a488f6afc4601. Nine legacy raw/processed files move outside Vite public assets with byte-preservation checks and a build allowlist. Chart corrections use numeric calendar spacing, null missing years and separate segments at gaps/welfare/survey boundaries. The source review clarifies Tajikistan modernized-HBS2021+, and Uzbekistan's adjacent2011/2012 national-poverty spells require an explicit break. Values/formulas/snapshot remain unchanged.
+
+PDF metadata, bookmarks, citation links and footer artifacts improve navigation; four fresh pages are visually inspected. They remain untagged, with accessible HTML as the alternative. Full candidate recovery/raw reconciliation and the immutable-refresh refusal are tested safely. Monitoring remains manual and required branch-check enforcement unverified.
+
+Vercel account/project and preview SSO protection are confirmed. Connector access fails403 at read_protection_bypass. CLI63.1.2 default configuration failsEXDEV; a private project-local configuration avoids that filesystem issue and whoami reports Logged out. No protection is weakened or credential printed. Corrected regression, publishedSHA, hostedCI and newpreview metadata are recorded in final handoff receipts. Production/main/v1tag remain frozen.

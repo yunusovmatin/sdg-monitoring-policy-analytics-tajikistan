@@ -4,7 +4,7 @@ import { parseData, comparisonRows, comparisonCsv, dashboardCsv, coverage, obser
 import { parseCsv } from "./csv";
 import { ASSUMPTIONS, DEFAULT_INPUTS, calculateScenario, getScenarioBaseline, scenarioCsv } from "./scenario";
 import { mergeLive } from "./live";
-const data=parseData(readFileSync("client/public/data/processed/sdg_tjk_tidy.csv","utf8"));
+const data=parseData(readFileSync("data/legacy/v1.0.0/processed/sdg_tjk_tidy.csv","utf8"));
 const baseline=getScenarioBaseline(data)!;
 describe("analytical reconciliation",()=>{
  it("uses same-year national poverty, youth and population, without mixing poverty lines",()=>{

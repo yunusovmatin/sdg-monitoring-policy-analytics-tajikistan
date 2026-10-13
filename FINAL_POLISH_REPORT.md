@@ -1,3 +1,5 @@
+> Historical v1.0.0 record. Superseded for v2 review by docs/PRODUCTION_READINESS_REPORT.md and the versioned candidate evidence. This file does not validate current data definitions or the v2 release.
+
 > Historical report, superseded for current acceptance by FINAL_VALIDATION_REPORT.md and docs/NUMERICAL_RECONCILIATION.md. Earlier checks do not validate the later analytical corrections.
 
 # Tajikistan SDG dashboard: final polish report
